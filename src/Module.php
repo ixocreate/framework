@@ -1,4 +1,12 @@
 <?php
+/**
+ * kiwi-suite/framework (https://github.com/kiwi-suite/framework)
+ *
+ * @package kiwi-suite/framework
+ * @see https://github.com/kiwi-suite/framework
+ * @copyright Copyright (c) 2010 - 2018 kiwi suite GmbH
+ * @license MIT License
+ */
 declare(strict_types=1);
 namespace KiwiSuite\Framework;
 
