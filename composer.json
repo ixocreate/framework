@@ -19,7 +19,8 @@
         "kiwi-suite/common-types": "dev-develop",
         "kiwi-suite/config": "dev-develop",
         "kiwi-suite/database": "dev-develop",
-        "kiwi-suite/project-uri": "dev-develop"
+        "kiwi-suite/project-uri": "dev-develop",
+        "kiwi-suite/template": "dev-develop"
     },
     "require-dev": {
         "phpunit/phpunit": "^6.0.6",
