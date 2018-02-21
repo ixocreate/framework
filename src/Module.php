@@ -15,6 +15,7 @@ use KiwiSuite\Application\Module\ModuleInterface;
 use KiwiSuite\Application\Service\ServiceRegistry;
 use KiwiSuite\ApplicationConsole\Bootstrap\ConsoleApplicationBootstrap;
 use KiwiSuite\ApplicationHttp\Bootstrap\ApplicationHttpBootstrap;
+use KiwiSuite\CommandBus\Bootstrap\CommandBusBootstrap;
 use KiwiSuite\CommonTypes\Bootstrap\CommonTypesBootstrap;
 use KiwiSuite\Database\Bootstrap\DatabaseBootstrap;
 use KiwiSuite\Entity\Bootstrap\EntityBootstrap;
@@ -89,6 +90,7 @@ final class Module implements ModuleInterface
             CommonTypesBootstrap::class,
             DatabaseBootstrap::class,
             ProjectUriBootstrap::class,
+            CommandBusBootstrap::class,
         ];
     }
 }
