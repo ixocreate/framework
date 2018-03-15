@@ -194,6 +194,4 @@ final class Package implements PackageInterface
             CommonTypesBootstrap::class,
         ];
     }
-
-
 }
