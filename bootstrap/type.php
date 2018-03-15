@@ -2,8 +2,10 @@
 namespace KiwiSuite\Admin;
 
 use KiwiSuite\Admin\Type\RoleType;
+use KiwiSuite\Entity\Type\TypeConfigurator;
 use KiwiSuite\Entity\Type\TypeInterface;
 use KiwiSuite\ServiceManager\ServiceManagerConfigurator;
 
-/** @var ServiceManagerConfigurator $typeConfigurator */
-$typeConfigurator->addDirectory(getcwd() . '/src/App/Type', true, [TypeInterface::class]);
+/** @var TypeConfigurator $type */
+$type->addDirectory(getcwd() . '/src/App/Type', true);
+$type->addDirectory(getcwd() . '/src/Admin/Type', true);

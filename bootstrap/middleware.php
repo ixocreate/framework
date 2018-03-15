@@ -2,11 +2,11 @@
 declare(strict_types=1);
 namespace Framework;
 
-/** @var \KiwiSuite\ServiceManager\ServiceManagerConfigurator $middlewareConfigurator */
-use Psr\Http\Server\MiddlewareInterface;
+/** @var MiddlewareConfigurator $middleware */
+use KiwiSuite\ApplicationHttp\Middleware\MiddlewareConfigurator;
 
-$middlewareConfigurator->addDirectory(getcwd() . '/src/App/Action', true, [MiddlewareInterface::class]);
-$middlewareConfigurator->addDirectory(getcwd() . '/src/App/Admin/Action', true, [MiddlewareInterface::class]);
-$middlewareConfigurator->addDirectory(getcwd() . '/src/App/Middleware', true, [MiddlewareInterface::class]);
-$middlewareConfigurator->addDirectory(getcwd() . '/src/App/Admin/Middleware', true, [MiddlewareInterface::class]);
+$middleware->addDirectory(getcwd() . '/src/App/Action', true);
+$middleware->addDirectory(getcwd() . '/src/Admin/Action', true);
+$middleware->addDirectory(getcwd() . '/src/App/Middleware', true);
+$middleware->addDirectory(getcwd() . '/src/Admin/Middleware', true);
 

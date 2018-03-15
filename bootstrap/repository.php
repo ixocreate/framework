@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace KiwiSuite\Admin;
 
-/** @var \KiwiSuite\ServiceManager\ServiceManagerConfigurator $repositoryConfigurator */
-use KiwiSuite\Database\Repository\RepositoryInterface;
+/** @var RepositoryConfigurator $repository */
+use KiwiSuite\Database\Repository\RepositoryConfigurator;
 
-$repositoryConfigurator->addDirectory( getcwd() . '/src/App/Repository', true, [RepositoryInterface::class]);
-$repositoryConfigurator->addDirectory( getcwd() . '/src/App/Admin/Repository', true, [RepositoryInterface::class]);
+$repository->addDirectory( getcwd() . '/src/App/Repository', true);
+$repository->addDirectory( getcwd() . '/src/Admin/Repository', true);

@@ -1,8 +1,7 @@
 <?php
 namespace KiwiSuite\Admin;
 
-use KiwiSuite\Admin\Resource\ResourceInterface;
-use KiwiSuite\ServiceManager\ServiceManagerConfigurator;
+use KiwiSuite\Admin\Resource\ResourceConfigurator;
 
-/** @var ServiceManagerConfigurator $resourceConfigurator */
-$resourceConfigurator->addDirectory(getcwd() . '/src/App/Admin/Resource', true, [ResourceInterface::class]);
+/** @var ResourceConfigurator $resource */
+$resource->addDirectory(getcwd() . '/src/Admin/Resource', true);

@@ -3,8 +3,9 @@ declare(strict_types=1);
 
 namespace KiwiSuite\Admin;
 
-/** @var \KiwiSuite\ServiceManager\ServiceManagerConfigurator $messageConfigurator */
-use KiwiSuite\CommandBus\Message\MessageInterface;
+/** @var MessageConfigurator $message */
+use KiwiSuite\CommandBus\Message\MessageConfigurator;
 
-$messageConfigurator->addDirectory( getcwd() . '/src/App/Admin/Message', true, [MessageInterface::class]);
+$message->addDirectory( getcwd() . '/src/App/Message', true);
+$message->addDirectory( getcwd() . '/src/Admin/Message', true);
 

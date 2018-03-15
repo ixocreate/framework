@@ -1,8 +1,8 @@
 <?php
 namespace KiwiSuite\Admin;
 
-/** @var ServiceManagerConfigurator $consoleServiceManagerConfigurator */
-use KiwiSuite\ApplicationConsole\Command\CommandInterface;
-use KiwiSuite\ServiceManager\ServiceManagerConfigurator;
+/** @var ConsoleConfigurator $console */
+use KiwiSuite\ApplicationConsole\ConsoleConfigurator;
 
-$consoleServiceManagerConfigurator->addDirectory(getcwd() . '/src/App/Console', true, [CommandInterface::class]);
+$console->addDirectory(getcwd() . '/src/App/Console', true);
+$console->addDirectory(getcwd() . '/src/Admin/Console', true);
