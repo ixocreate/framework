@@ -33,7 +33,6 @@ use KiwiSuite\CommandBus\Factory\CommandBusFactory;
 use KiwiSuite\CommandBus\Handler\HandlerSubManager;
 use KiwiSuite\CommandBus\Message\MessageSubManager;
 use KiwiSuite\CommandBus\QueueFactory\PersistentFactory;
-use KiwiSuite\CommonTypes\Bootstrap\CommonTypesBootstrap;
 use KiwiSuite\Contract\Application\ConfiguratorRegistryInterface;
 use KiwiSuite\Contract\Application\PackageInterface;
 use KiwiSuite\Contract\Application\ServiceRegistryInterface;
