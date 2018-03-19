@@ -68,6 +68,11 @@ use KiwiSuite\ProjectUri\Middleware\ProjectUriCheckMiddleware;
 use KiwiSuite\ProjectUri\ProjectUri;
 use KiwiSuite\ServiceManager\BootstrapItem\ServiceManagerBootstrapItem;
 use KiwiSuite\ServiceManager\ServiceManagerConfigurator;
+use KiwiSuite\Template\BootstrapItem\TemplateBootstrapItem;
+use KiwiSuite\Template\Extension\ExtensionSubManager;
+use KiwiSuite\Template\Factory\TemplateRendererFactory;
+use KiwiSuite\Template\Middleware\TemplateMiddleware;
+use KiwiSuite\Template\Renderer;
 use Zend\Expressive\Router\FastRouteRouter;
 use Zend\HttpHandlerRunner\RequestHandlerRunner;
 use Doctrine\DBAL\Migrations\Configuration\Configuration as MigrationConfiguration;
@@ -97,6 +102,8 @@ final class Package implements PackageInterface
         $serviceManagerConfigurator->addFactory(ConnectionConfig::class, ConnectionConfigFactory::class);
         $serviceManagerConfigurator->addFactory(MigrationConfiguration::class, MigrationConfigFactory::class);
 
+        $serviceManagerConfigurator->addFactory(Renderer::class, TemplateRendererFactory::class);
+        $serviceManagerConfigurator->addSubManager(ExtensionSubManager::class);
 
         $serviceManagerConfigurator->addSubManager(HandlerSubManager::class);
         $serviceManagerConfigurator->addSubManager(MessageSubManager::class);
@@ -108,6 +115,7 @@ final class Package implements PackageInterface
         $middlewareConfigurator = $configuratorRegistry->get(MiddlewareBootstrapItem::class);
         $middlewareConfigurator->addMiddleware(SegmentMiddlewarePipe::class, SegmentMiddlewareFactory::class);
         $middlewareConfigurator->addMiddleware(ProjectUriCheckMiddleware::class);
+        $middlewareConfigurator->addMiddleware(TemplateMiddleware::class);
 
         $serviceManagerConfigurator->addSubManager(ConnectionSubManager::class, ConnectionSubManagerFactory::class);
         $serviceManagerConfigurator->addSubManager(RepositorySubManager::class);
@@ -189,9 +197,7 @@ final class Package implements PackageInterface
             RepositoryBootstrapItem::class,
             HandlerBootstrapItem::class,
             MessageBootstrapItem::class,
-        ];
-        return [
-            CommonTypesBootstrap::class,
+            TemplateBootstrapItem::class,
         ];
     }
 }
