@@ -21,6 +21,7 @@
         "kiwi-suite/database": "dev-develop",
         "kiwi-suite/project-uri": "dev-develop",
         "kiwi-suite/command-bus": "dev-develop",
+        "kiwi-suite/asset": "dev-develop",
         "kiwi-suite/template": "dev-develop"
     },
     "require-dev": {

@@ -23,6 +23,8 @@ use KiwiSuite\ApplicationHttp\Middleware\Factory\SegmentMiddlewareFactory;
 use KiwiSuite\ApplicationHttp\Middleware\MiddlewareConfigurator;
 use KiwiSuite\ApplicationHttp\Middleware\MiddlewareSubManager;
 use KiwiSuite\ApplicationHttp\Middleware\SegmentMiddlewarePipe;
+use KiwiSuite\Asset\Asset;
+use KiwiSuite\Asset\Factory\AssetFactory;
 use KiwiSuite\CommandBus\BootstrapItem\HandlerBootstrapItem;
 use KiwiSuite\CommandBus\BootstrapItem\MessageBootstrapItem;
 use KiwiSuite\CommandBus\CommandBus;
@@ -103,6 +105,8 @@ final class Package implements PackageInterface
 
         $serviceManagerConfigurator->addFactory(Renderer::class, TemplateRendererFactory::class);
         $serviceManagerConfigurator->addSubManager(ExtensionSubManager::class);
+
+        $serviceManagerConfigurator->addFactory(Asset::class, AssetFactory::class);
 
         $serviceManagerConfigurator->addSubManager(HandlerSubManager::class);
         $serviceManagerConfigurator->addSubManager(MessageSubManager::class);
