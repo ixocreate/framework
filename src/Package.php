@@ -10,25 +10,22 @@
 declare(strict_types=1);
 namespace KiwiSuite\Framework;
 
+use KiwiSuite\Application\BootstrapItem\PublishBootstrapItem;
+use KiwiSuite\Application\BootstrapItem\PublishDefinitionBootstrapItem;
 use KiwiSuite\ApplicationConsole\BootstrapItem\ConsoleBootstrapItem;
 use KiwiSuite\ApplicationConsole\Console\ConsoleRunner;
 use KiwiSuite\ApplicationConsole\Console\Factory\ConsoleRunnerFactory;
-use KiwiSuite\ApplicationConsole\ConsoleConfigurator;
 use KiwiSuite\ApplicationConsole\ConsoleSubManager;
 use KiwiSuite\ApplicationHttp\BootstrapItem\MiddlewareBootstrapItem;
 use KiwiSuite\ApplicationHttp\BootstrapItem\PipeBootstrapItem;
 use KiwiSuite\ApplicationHttp\Factory\FastRouterFactory;
 use KiwiSuite\ApplicationHttp\Factory\RequestHandlerRunnerFactory;
-use KiwiSuite\ApplicationHttp\Middleware\Factory\SegmentMiddlewareFactory;
-use KiwiSuite\ApplicationHttp\Middleware\MiddlewareConfigurator;
 use KiwiSuite\ApplicationHttp\Middleware\MiddlewareSubManager;
-use KiwiSuite\ApplicationHttp\Middleware\SegmentMiddlewarePipe;
 use KiwiSuite\Asset\Asset;
 use KiwiSuite\Asset\Factory\AssetFactory;
 use KiwiSuite\CommandBus\BootstrapItem\HandlerBootstrapItem;
 use KiwiSuite\CommandBus\BootstrapItem\MessageBootstrapItem;
 use KiwiSuite\CommandBus\CommandBus;
-use KiwiSuite\CommandBus\Console\ConsumeCommand;
 use KiwiSuite\CommandBus\Consumer\Consumer;
 use KiwiSuite\CommandBus\Consumer\Factory\ConsumerFactory;
 use KiwiSuite\CommandBus\Factory\CommandBusFactory;
@@ -40,15 +37,6 @@ use KiwiSuite\Contract\Application\PackageInterface;
 use KiwiSuite\Contract\Application\ServiceRegistryInterface;
 use KiwiSuite\Contract\ServiceManager\ServiceManagerInterface;
 use KiwiSuite\Database\BootstrapItem\RepositoryBootstrapItem;
-use KiwiSuite\Database\Command\GenerateClassesCommand;
-use KiwiSuite\Database\Command\GenerateCommand;
-use KiwiSuite\Database\Command\GenerateEntitiesCommand;
-use KiwiSuite\Database\Command\GenerateMetadataCommand;
-use KiwiSuite\Database\Command\GenerateRepositoriesCommand;
-use KiwiSuite\Database\Command\GenerateResourcesCommand;
-use KiwiSuite\Database\Command\MigrateCommand;
-use KiwiSuite\Database\Command\StatusCommand;
-use KiwiSuite\Database\Command\VersionCommand;
 use KiwiSuite\Database\ConfigProvider as DatabaseConfigProvider;
 use KiwiSuite\Database\Connection\ConnectionConfig;
 use KiwiSuite\Database\Connection\Factory\ConnectionConfigFactory;
@@ -63,17 +51,22 @@ use KiwiSuite\Database\Type\TypeConfig;
 use KiwiSuite\Entity\BootstrapItem\TypeBootstrapItem;
 use KiwiSuite\Entity\Type\Type;
 use KiwiSuite\Entity\Type\TypeSubManager;
+use KiwiSuite\Filesystem\Adapter\Factory\FilesystemAdapterSubManagerFactory;
+use KiwiSuite\Filesystem\Adapter\FilesystemAdapterSubManager;
+use KiwiSuite\Filesystem\Storage\Factory\StorageConfigFactory;
+use KiwiSuite\Filesystem\Storage\Factory\StorageSubManagerFactory;
+use KiwiSuite\Filesystem\Storage\StorageConfig;
+use KiwiSuite\Filesystem\Storage\StorageSubManager;
 use KiwiSuite\ProjectUri\ConfigProvider as ProjectUriConfigProvider;
 use KiwiSuite\ProjectUri\Factory\ProjectUriFactory;
-use KiwiSuite\ProjectUri\Middleware\ProjectUriCheckMiddleware;
 use KiwiSuite\ProjectUri\ProjectUri;
 use KiwiSuite\ServiceManager\BootstrapItem\ServiceManagerBootstrapItem;
 use KiwiSuite\ServiceManager\ServiceManagerConfigurator;
 use KiwiSuite\Template\BootstrapItem\TemplateBootstrapItem;
 use KiwiSuite\Template\Extension\ExtensionSubManager;
 use KiwiSuite\Template\Factory\TemplateRendererFactory;
-use KiwiSuite\Template\Middleware\TemplateMiddleware;
 use KiwiSuite\Template\Renderer;
+use KiwiSuite\Filesystem\ConfigProvider as FilesystemConfigProvider;
 use Zend\Expressive\Router\FastRouteRouter;
 use Zend\HttpHandlerRunner\RequestHandlerRunner;
 use Doctrine\DBAL\Migrations\Configuration\Configuration as MigrationConfiguration;
@@ -114,29 +107,13 @@ final class Package implements PackageInterface
         $serviceManagerConfigurator->addFactory(PersistentFactory::class, \KiwiSuite\CommandBus\QueueFactory\Factory\PersistentFactory::class);
         $serviceManagerConfigurator->addFactory(Consumer::class, ConsumerFactory::class);
 
-        /** @var MiddlewareConfigurator $middlewareConfigurator */
-        $middlewareConfigurator = $configuratorRegistry->get(MiddlewareBootstrapItem::class);
-        $middlewareConfigurator->addMiddleware(SegmentMiddlewarePipe::class, SegmentMiddlewareFactory::class);
-        $middlewareConfigurator->addMiddleware(ProjectUriCheckMiddleware::class);
-        $middlewareConfigurator->addMiddleware(TemplateMiddleware::class);
-
         $serviceManagerConfigurator->addSubManager(ConnectionSubManager::class, ConnectionSubManagerFactory::class);
         $serviceManagerConfigurator->addSubManager(RepositorySubManager::class);
         $serviceManagerConfigurator->addSubManager(EntityManagerSubManager::class, EntityManagerSubManagerFactory::class);
 
-        /** @var ConsoleConfigurator $consoleConfigurator */
-        $consoleConfigurator = $configuratorRegistry->get(ConsoleBootstrapItem::class);
-
-        $consoleConfigurator->addCommand(GenerateCommand::class);
-        $consoleConfigurator->addCommand(MigrateCommand::class);
-        $consoleConfigurator->addCommand(StatusCommand::class);
-        $consoleConfigurator->addCommand(VersionCommand::class);
-        $consoleConfigurator->addCommand(GenerateEntitiesCommand::class);
-        $consoleConfigurator->addCommand(GenerateRepositoriesCommand::class);
-        $consoleConfigurator->addCommand(GenerateResourcesCommand::class);
-        $consoleConfigurator->addCommand(GenerateMetadataCommand::class);
-        $consoleConfigurator->addCommand(GenerateClassesCommand::class);
-        $consoleConfigurator->addCommand(ConsumeCommand::class);
+        $serviceManagerConfigurator->addFactory(StorageConfig::class, StorageConfigFactory::class);
+        $serviceManagerConfigurator->addSubManager(FilesystemAdapterSubManager::class, FilesystemAdapterSubManagerFactory::class);
+        $serviceManagerConfigurator->addSubManager(StorageSubManager::class, StorageSubManagerFactory::class);
     }
 
     /**
@@ -154,6 +131,7 @@ final class Package implements PackageInterface
         return [
             ProjectUriConfigProvider::class,
             DatabaseConfigProvider::class,
+            FilesystemConfigProvider::class,
         ];
     }
 
@@ -183,7 +161,7 @@ final class Package implements PackageInterface
      */
     public function getConfigDirectory(): ?string
     {
-        return null;
+        return __DIR__ . '/../config';
     }
 
     /**
@@ -192,6 +170,8 @@ final class Package implements PackageInterface
     public function getBootstrapItems(): ?array
     {
         return [
+            PublishDefinitionBootstrapItem::class,
+            PublishBootstrapItem::class,
             MiddlewareBootstrapItem::class,
             PipeBootstrapItem::class,
             ConsoleBootstrapItem::class,
