@@ -30,7 +30,6 @@ use KiwiSuite\ServiceManager\ServiceManagerConfigurator;
 use Zend\Expressive\Router\FastRouteRouter;
 use Zend\HttpHandlerRunner\RequestHandlerRunner;
 
-
 final class Package implements PackageInterface
 {
 
@@ -48,7 +47,7 @@ final class Package implements PackageInterface
 
         $serviceManagerConfigurator->addFactory(ConsoleRunner::class, ConsoleRunnerFactory::class);
         $serviceManagerConfigurator->addSubManager(ConsoleSubManager::class);
-       }
+    }
 
     /**
      * @param ServiceRegistryInterface $serviceRegistry
@@ -72,7 +71,6 @@ final class Package implements PackageInterface
      */
     public function boot(ServiceManagerInterface $serviceManager): void
     {
-
     }
 
     /**
