@@ -9,8 +9,6 @@ use KiwiSuite\ApplicationHttp\ErrorHandling\Response\NotFoundHandler;
 use KiwiSuite\ApplicationHttp\Middleware\Factory\SegmentMiddlewareFactory;
 use KiwiSuite\ApplicationHttp\Middleware\MiddlewareConfigurator;
 use KiwiSuite\ApplicationHttp\Middleware\SegmentMiddlewarePipe;
-use KiwiSuite\ProjectUri\Middleware\ProjectUriCheckMiddleware;
-use KiwiSuite\Template\Middleware\TemplateMiddleware;
 use Zend\Stratigility\Middleware\ErrorHandler;
 
 $middleware->addDirectory(getcwd() . '/src/App/Action', true);
@@ -23,6 +21,4 @@ $middleware->addMiddleware(ErrorHandler::class, ErrorHandlerFactory::class);
 $middleware->addMiddleware(NotFoundHandler::class, NotFoundHandlerFactory::class);
 
 $middleware->addMiddleware(SegmentMiddlewarePipe::class, SegmentMiddlewareFactory::class);
-$middleware->addMiddleware(ProjectUriCheckMiddleware::class);
-$middleware->addMiddleware(TemplateMiddleware::class);
 
