@@ -117,6 +117,7 @@ final class Package implements PackageInterface
             \KiwiSuite\CommonTypes\Package::class,
             \KiwiSuite\CommandBus\Package::class,
             \KiwiSuite\Asset\Package::class,
+            \KiwiSuite\Media\Package::class,
         ];
     }
 }
