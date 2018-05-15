@@ -24,6 +24,7 @@
         "kiwi-suite/asset": "dev-develop",
         "kiwi-suite/filesystem": "dev-develop",
         "kiwi-suite/media": "dev-develop",
+        "kiwi-suite/cms": "dev-develop",
         "kiwi-suite/template": "dev-develop"
     },
     "require-dev": {
