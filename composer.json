@@ -26,6 +26,7 @@
         "kiwi-suite/media": "dev-develop",
         "kiwi-suite/cms": "dev-develop",
         "kiwi-suite/intl": "dev-develop",
+        "kiwi-suite/schema": "dev-develop",
         "kiwi-suite/template": "dev-develop"
     },
     "require-dev": {
