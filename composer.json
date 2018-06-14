@@ -27,6 +27,7 @@
         "kiwi-suite/cms": "dev-develop",
         "kiwi-suite/intl": "dev-develop",
         "kiwi-suite/schema": "dev-develop",
+        "kiwi-suite/scheduler": "dev-develop",
         "kiwi-suite/template": "dev-develop"
     },
     "require-dev": {
