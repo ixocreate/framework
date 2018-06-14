@@ -120,7 +120,8 @@ final class Package implements PackageInterface
             \KiwiSuite\Media\Package::class,
             \KiwiSuite\Cms\Package::class,
             \KiwiSuite\Intl\Package::class,
-            \KiwiSuite\Scheduler\Package::class
+            \KiwiSuite\Scheduler\Package::class,
+            \KiwiSuite\Schema\Package::class,
         ];
     }
 }
