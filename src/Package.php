@@ -122,6 +122,7 @@ final class Package implements PackageInterface
             \KiwiSuite\Intl\Package::class,
             \KiwiSuite\Scheduler\Package::class,
             \KiwiSuite\Schema\Package::class,
+            \KiwiSuite\Resource\Package::class,
         ];
     }
 }

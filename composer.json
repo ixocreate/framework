@@ -28,7 +28,8 @@
         "kiwi-suite/intl": "dev-develop",
         "kiwi-suite/schema": "dev-develop",
         "kiwi-suite/scheduler": "dev-develop",
-        "kiwi-suite/template": "dev-develop"
+        "kiwi-suite/template": "dev-develop",
+        "kiwi-suite/resource": "dev-develop"
     },
     "require-dev": {
         "phpunit/phpunit": "^6.0.6",
