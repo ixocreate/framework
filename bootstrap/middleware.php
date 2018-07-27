@@ -8,6 +8,7 @@ use KiwiSuite\ApplicationHttp\ErrorHandling\Factory\NotFoundHandlerFactory;
 use KiwiSuite\ApplicationHttp\ErrorHandling\Response\NotFoundHandler;
 use KiwiSuite\ApplicationHttp\Middleware\Factory\SegmentMiddlewareFactory;
 use KiwiSuite\ApplicationHttp\Middleware\MiddlewareConfigurator;
+use KiwiSuite\ApplicationHttp\Middleware\RootRequestWrapperMiddleware;
 use KiwiSuite\ApplicationHttp\Middleware\SegmentMiddlewarePipe;
 use Zend\Stratigility\Middleware\ErrorHandler;
 
@@ -19,6 +20,7 @@ $middleware->addDirectory(getcwd() . '/src/Admin/Middleware', true);
 //ErrorHandler & NotFoundHandler
 $middleware->addMiddleware(ErrorHandler::class, ErrorHandlerFactory::class);
 $middleware->addMiddleware(NotFoundHandler::class, NotFoundHandlerFactory::class);
+$middleware->addMiddleware(RootRequestWrapperMiddleware::class);
 
 $middleware->addMiddleware(SegmentMiddlewarePipe::class, SegmentMiddlewareFactory::class);
 
