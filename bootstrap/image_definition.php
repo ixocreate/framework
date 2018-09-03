@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace KiwiSuite\Framwork;
+namespace KiwiSuite\Framework;
 
 use KiwiSuite\Media\ImageDefinition\ImageDefinitionConfigurator;
 
