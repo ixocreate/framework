@@ -125,6 +125,7 @@ final class Package implements PackageInterface
             \KiwiSuite\Resource\Package::class,
             \KiwiSuite\Event\Package::class,
             \KiwiSuite\Translation\Package::class,
+            \KiwiSuite\Validation\Package::class,
         ];
     }
 }
