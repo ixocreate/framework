@@ -25,7 +25,7 @@
         "kiwi-suite/asset": "dev-develop",
         "kiwi-suite/filesystem": "dev-develop",
         "kiwi-suite/media": "dev-develop",
-        "kiwi-suite/cms": "dev-develop",
+        "kiwi-suite/cms": "v2.x-dev",
         "kiwi-suite/intl": "dev-develop",
         "kiwi-suite/schema": "dev-develop",
         "kiwi-suite/scheduler": "dev-develop",
