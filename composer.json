@@ -22,6 +22,7 @@
         "kiwi-suite/project-uri": "dev-develop",
         "kiwi-suite/command-bus": "v2.x-dev",
         "kiwi-suite/command-bus-validation": "dev-develop",
+        "kiwi-suite/command-bus-filter": "dev-develop",
         "kiwi-suite/asset": "dev-develop",
         "kiwi-suite/filesystem": "dev-develop",
         "kiwi-suite/media": "dev-develop",
@@ -33,6 +34,7 @@
         "kiwi-suite/translation": "dev-develop",
         "kiwi-suite/event": "dev-develop",
         "kiwi-suite/validation": "dev-develop",
+        "kiwi-suite/filter": "dev-develop",
         "kiwi-suite/resource": "dev-develop"
     },
     "require-dev": {
