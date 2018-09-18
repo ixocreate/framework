@@ -25,7 +25,7 @@
         "kiwi-suite/command-bus-filter": "dev-develop",
         "kiwi-suite/asset": "dev-develop",
         "kiwi-suite/filesystem": "dev-develop",
-        "kiwi-suite/media": "dev-develop",
+        "kiwi-suite/media": "v2.x-dev",
         "kiwi-suite/cms": "v2.x-dev",
         "kiwi-suite/intl": "dev-develop",
         "kiwi-suite/schema": "dev-develop",
