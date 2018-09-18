@@ -3,7 +3,7 @@ namespace KiwiSuite\Framework;
 
 use KiwiSuite\CommandBus\Configurator;
 use KiwiSuite\CommandBus\Handler\ExecutionHandler;
-use KiwiSuite\CommandBusValidation\FilterHandler;
+use KiwiSuite\CommandBusFilter\FilterHandler;
 use KiwiSuite\CommandBusValidation\ValidationHandler;
 
 /** @var Configurator $commandBus */
