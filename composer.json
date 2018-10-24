@@ -52,5 +52,8 @@
             "KiwiSuiteMisc\\Framework\\": "tests/misc/",
             "KiwiSuiteTest\\Framework\\": "tests/src/"
         }
+    },
+    "scripts" : {
+        "fix-cs": "vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix"
     }
 }
