@@ -1,10 +1,7 @@
 <?php
 /**
- * kiwi-suite/framework (https://github.com/kiwi-suite/framework)
- *
- * @package kiwi-suite/framework
- * @link https://github.com/kiwi-suite/framework
- * @copyright Copyright (c) 2010 - 2018 kiwi suite GmbH
+ * @link https://github.com/ixocreate
+ * @copyright IXOCREATE GmbH
  * @license MIT License
  */
 
@@ -34,7 +31,6 @@ use Zend\HttpHandlerRunner\RequestHandlerRunner;
 
 final class Package implements PackageInterface
 {
-
     /**
      * @param ConfiguratorRegistryInterface $configuratorRegistry
      */
