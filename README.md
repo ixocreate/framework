@@ -1,21 +1,26 @@
-**This is a draft. Don't use in production**
+# IXOCREATE framework
 
-# kiwi-suite/framework
-
-[![Build Status](https://travis-ci.org/kiwi-suite/framework.svg?branch=master)](https://travis-ci.org/kiwi-suite/framework)
-[![Coverage Status](https://coveralls.io/repos/github/kiwi-suite/framework/badge.svg?branch=develop)](https://coveralls.io/github/kiwi-suite/framework?branch=develop)
-[![Packagist](https://img.shields.io/packagist/v/kiwi-suite/framework.svg)](https://packagist.org/packages/kiwi-suite/framework)
-[![Packagist Pre Release](https://img.shields.io/packagist/vpre/kiwi-suite/framework.svg)](https://packagist.org/packages/kiwi-suite/framework)
-[![Packagist](https://img.shields.io/packagist/l/kiwi-suite/framework.svg)](https://packagist.org/packages/kiwi-suite/framework)
+[![Build Status](https://travis-ci.org/ixocreate/framework.svg?branch=master)](https://travis-ci.org/ixocreate/framework)
+[![Coverage Status](https://coveralls.io/repos/github/ixocreate/framework/badge.svg?branch=develop)](https://coveralls.io/github/ixocreate/framework?branch=develop)
+[![Packagist](https://img.shields.io/packagist/v/ixocreate/framework.svg)](https://packagist.org/packages/ixocreate/framework)
+[![Packagist Pre Release](https://img.shields.io/packagist/vpre/ixocreate/framework.svg)](https://packagist.org/packages/ixocreate/framework)
+[![Packagist](https://img.shields.io/packagist/l/ixocreate/framework.svg)](https://packagist.org/packages/ixocreate/framework)
 
 ## Installation
 
-The suggested installation method is via [composer](https://getcomposer.org/):
+Install the package via composer:
 
 ```sh
-php composer.phar require kiwi-suite/framework
+composer require ixocreate/framework
+```
+
+## Testing
+
+```sh
+composer install --dev
+phpunit
 ```
 
 ## License
 
-kiwi-suite/framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT) - see the `LICENSE` file for details
+The MIT License (MIT). Please see [LICENSE](LICENSE) for more information.
