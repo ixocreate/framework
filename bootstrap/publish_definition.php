@@ -1,7 +1,7 @@
 <?php
-namespace KiwiSuite\Framework;
+namespace Ixocreate\Framework;
 
 /** @var PublishDefinitionConfigurator $publishDefinition */
-use KiwiSuite\Application\Publish\PublishDefinitionConfigurator;
+use Ixocreate\Application\Publish\PublishDefinitionConfigurator;
 
 $publishDefinition->add('migrations', 'migrations');

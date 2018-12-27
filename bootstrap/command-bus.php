@@ -1,10 +1,10 @@
 <?php
-namespace KiwiSuite\Framework;
+namespace Ixocreate\Framework;
 
-use KiwiSuite\CommandBus\Configurator;
-use KiwiSuite\CommandBus\Handler\ExecutionHandler;
-use KiwiSuite\CommandBusFilter\FilterHandler;
-use KiwiSuite\CommandBusValidation\ValidationHandler;
+use Ixocreate\CommandBus\Configurator;
+use Ixocreate\CommandBus\Handler\ExecutionHandler;
+use Ixocreate\CommandBusFilter\FilterHandler;
+use Ixocreate\CommandBusValidation\ValidationHandler;
 
 /** @var Configurator $commandBus */
 $commandBus->addHandler(FilterHandler::class, null, 1000001);

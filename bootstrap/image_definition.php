@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace KiwiSuite\Framework;
+namespace Ixocreate\Framework;
 
-use KiwiSuite\Media\ImageDefinition\ImageDefinitionConfigurator;
+use Ixocreate\Media\ImageDefinition\ImageDefinitionConfigurator;
 
 /** @var ImageDefinitionConfigurator $imageDefinition */
 /**

@@ -3,13 +3,13 @@ declare(strict_types=1);
 namespace Framework;
 
 /** @var MiddlewareConfigurator $middleware */
-use KiwiSuite\ApplicationHttp\ErrorHandling\Factory\ErrorHandlerFactory;
-use KiwiSuite\ApplicationHttp\ErrorHandling\Factory\NotFoundHandlerFactory;
-use KiwiSuite\ApplicationHttp\ErrorHandling\Response\NotFoundHandler;
-use KiwiSuite\ApplicationHttp\Middleware\Factory\SegmentMiddlewareFactory;
-use KiwiSuite\ApplicationHttp\Middleware\MiddlewareConfigurator;
-use KiwiSuite\ApplicationHttp\Middleware\RootRequestWrapperMiddleware;
-use KiwiSuite\ApplicationHttp\Middleware\SegmentMiddlewarePipe;
+use Ixocreate\ApplicationHttp\ErrorHandling\Factory\ErrorHandlerFactory;
+use Ixocreate\ApplicationHttp\ErrorHandling\Factory\NotFoundHandlerFactory;
+use Ixocreate\ApplicationHttp\ErrorHandling\Response\NotFoundHandler;
+use Ixocreate\ApplicationHttp\Middleware\Factory\SegmentMiddlewareFactory;
+use Ixocreate\ApplicationHttp\Middleware\MiddlewareConfigurator;
+use Ixocreate\ApplicationHttp\Middleware\RootRequestWrapperMiddleware;
+use Ixocreate\ApplicationHttp\Middleware\SegmentMiddlewarePipe;
 use Zend\Stratigility\Middleware\ErrorHandler;
 
 $middleware->addDirectory(getcwd() . '/src/App/Action', true);

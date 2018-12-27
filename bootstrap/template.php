@@ -1,8 +1,8 @@
 <?php
-namespace KiwiSuite\Framework;
+namespace Ixocreate\Framework;
 
 /** @var TemplateConfigurator $template */
-use KiwiSuite\Template\TemplateConfigurator;
+use Ixocreate\Template\TemplateConfigurator;
 
 // ErrorHandler Templates
 $template->addDirectory('error', \getcwd() . '/templates/error');

@@ -1,8 +1,8 @@
 <?php
 
-namespace KiwiSuite\Framework;
+namespace Ixocreate\Framework;
 
-use KiwiSuite\Cms\PageType\PageTypeConfigurator;
+use Ixocreate\Cms\PageType\PageTypeConfigurator;
 
 /** @var PageTypeConfigurator $pageType */
 

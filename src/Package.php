@@ -10,25 +10,25 @@
 
 declare(strict_types=1);
 
-namespace KiwiSuite\Framework;
+namespace Ixocreate\Framework;
 
-use KiwiSuite\Application\BootstrapItem\PublishBootstrapItem;
-use KiwiSuite\Application\BootstrapItem\PublishDefinitionBootstrapItem;
-use KiwiSuite\ApplicationConsole\BootstrapItem\ConsoleBootstrapItem;
-use KiwiSuite\ApplicationConsole\Console\ConsoleRunner;
-use KiwiSuite\ApplicationConsole\Console\Factory\ConsoleRunnerFactory;
-use KiwiSuite\ApplicationConsole\ConsoleSubManager;
-use KiwiSuite\ApplicationHttp\BootstrapItem\MiddlewareBootstrapItem;
-use KiwiSuite\ApplicationHttp\BootstrapItem\PipeBootstrapItem;
-use KiwiSuite\ApplicationHttp\Factory\FastRouterFactory;
-use KiwiSuite\ApplicationHttp\Factory\RequestHandlerRunnerFactory;
-use KiwiSuite\ApplicationHttp\Middleware\MiddlewareSubManager;
-use KiwiSuite\Contract\Application\ConfiguratorRegistryInterface;
-use KiwiSuite\Contract\Application\PackageInterface;
-use KiwiSuite\Contract\Application\ServiceRegistryInterface;
-use KiwiSuite\Contract\ServiceManager\ServiceManagerInterface;
-use KiwiSuite\ServiceManager\BootstrapItem\ServiceManagerBootstrapItem;
-use KiwiSuite\ServiceManager\ServiceManagerConfigurator;
+use Ixocreate\Application\BootstrapItem\PublishBootstrapItem;
+use Ixocreate\Application\BootstrapItem\PublishDefinitionBootstrapItem;
+use Ixocreate\ApplicationConsole\BootstrapItem\ConsoleBootstrapItem;
+use Ixocreate\ApplicationConsole\Console\ConsoleRunner;
+use Ixocreate\ApplicationConsole\Console\Factory\ConsoleRunnerFactory;
+use Ixocreate\ApplicationConsole\ConsoleSubManager;
+use Ixocreate\ApplicationHttp\BootstrapItem\MiddlewareBootstrapItem;
+use Ixocreate\ApplicationHttp\BootstrapItem\PipeBootstrapItem;
+use Ixocreate\ApplicationHttp\Factory\FastRouterFactory;
+use Ixocreate\ApplicationHttp\Factory\RequestHandlerRunnerFactory;
+use Ixocreate\ApplicationHttp\Middleware\MiddlewareSubManager;
+use Ixocreate\Contract\Application\ConfiguratorRegistryInterface;
+use Ixocreate\Contract\Application\PackageInterface;
+use Ixocreate\Contract\Application\ServiceRegistryInterface;
+use Ixocreate\Contract\ServiceManager\ServiceManagerInterface;
+use Ixocreate\ServiceManager\BootstrapItem\ServiceManagerBootstrapItem;
+use Ixocreate\ServiceManager\ServiceManagerConfigurator;
 use Zend\Expressive\Router\FastRouteRouter;
 use Zend\HttpHandlerRunner\RequestHandlerRunner;
 
@@ -111,24 +111,24 @@ final class Package implements PackageInterface
     public function getDependencies(): ?array
     {
         return [
-            \KiwiSuite\Entity\Package::class,
-            \KiwiSuite\Database\Package::class,
-            \KiwiSuite\Template\Package::class,
-            \KiwiSuite\ProjectUri\Package::class,
-            \KiwiSuite\Filesystem\Package::class,
-            \KiwiSuite\CommonTypes\Package::class,
-            \KiwiSuite\CommandBus\Package::class,
-            \KiwiSuite\Asset\Package::class,
-            \KiwiSuite\Media\Package::class,
-            \KiwiSuite\Cms\Package::class,
-            \KiwiSuite\Intl\Package::class,
-            \KiwiSuite\Scheduler\Package::class,
-            \KiwiSuite\Schema\Package::class,
-            \KiwiSuite\Resource\Package::class,
-            \KiwiSuite\Event\Package::class,
-            \KiwiSuite\Translation\Package::class,
-            \KiwiSuite\Validation\Package::class,
-            \KiwiSuite\Filter\Package::class,
+            \Ixocreate\Entity\Package::class,
+            \Ixocreate\Database\Package::class,
+            \Ixocreate\Template\Package::class,
+            \Ixocreate\ProjectUri\Package::class,
+            \Ixocreate\Filesystem\Package::class,
+            \Ixocreate\CommonTypes\Package::class,
+            \Ixocreate\CommandBus\Package::class,
+            \Ixocreate\Asset\Package::class,
+            \Ixocreate\Media\Package::class,
+            \Ixocreate\Cms\Package::class,
+            \Ixocreate\Intl\Package::class,
+            \Ixocreate\Scheduler\Package::class,
+            \Ixocreate\Schema\Package::class,
+            \Ixocreate\Resource\Package::class,
+            \Ixocreate\Event\Package::class,
+            \Ixocreate\Translation\Package::class,
+            \Ixocreate\Validation\Package::class,
+            \Ixocreate\Filter\Package::class,
         ];
     }
 }

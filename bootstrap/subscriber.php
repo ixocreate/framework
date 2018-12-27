@@ -1,6 +1,6 @@
 <?php
-namespace KiwiSuite\Framework;
+namespace Ixocreate\Framework;
 
-/** @var \KiwiSuite\Event\Subscriber\SubscriberConfigurator $subscriber */
+/** @var \Ixocreate\Event\Subscriber\SubscriberConfigurator $subscriber */
 
 $subscriber->addDirectory(getcwd() . '/src/App/Subscriber');

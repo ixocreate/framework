@@ -1,10 +1,10 @@
 <?php
-namespace KiwiSuite\Admin;
+namespace Ixocreate\Admin;
 
-use KiwiSuite\Admin\Type\RoleType;
-use KiwiSuite\Entity\Type\TypeConfigurator;
-use KiwiSuite\Entity\Type\TypeInterface;
-use KiwiSuite\ServiceManager\ServiceManagerConfigurator;
+use Ixocreate\Admin\Type\RoleType;
+use Ixocreate\Entity\Type\TypeConfigurator;
+use Ixocreate\Entity\Type\TypeInterface;
+use Ixocreate\ServiceManager\ServiceManagerConfigurator;
 
 /** @var TypeConfigurator $type */
 $type->addDirectory(getcwd() . '/src/App/Type', true);

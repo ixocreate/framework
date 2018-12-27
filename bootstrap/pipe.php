@@ -1,11 +1,11 @@
 <?php
-namespace KiwiSuite\Framework;
+namespace Ixocreate\Framework;
 
-use KiwiSuite\ApplicationHttp\ErrorHandling\Response\NotFoundHandler;
-use KiwiSuite\ApplicationHttp\Middleware\RootRequestWrapperMiddleware;
-use KiwiSuite\ApplicationHttp\Pipe\PipeConfigurator;
-use KiwiSuite\ProjectUri\Middleware\ProjectUriCheckMiddleware;
-use KiwiSuite\Template\Middleware\TemplateMiddleware;
+use Ixocreate\ApplicationHttp\ErrorHandling\Response\NotFoundHandler;
+use Ixocreate\ApplicationHttp\Middleware\RootRequestWrapperMiddleware;
+use Ixocreate\ApplicationHttp\Pipe\PipeConfigurator;
+use Ixocreate\ProjectUri\Middleware\ProjectUriCheckMiddleware;
+use Ixocreate\Template\Middleware\TemplateMiddleware;
 use Zend\Stratigility\Middleware\ErrorHandler;
 
 /** @var PipeConfigurator $pipe */

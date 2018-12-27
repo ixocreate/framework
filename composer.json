@@ -44,13 +44,13 @@
     },
     "autoload": {
         "psr-4": {
-            "KiwiSuite\\Framework\\": "src/"
+            "Ixocreate\\Framework\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "KiwiSuiteMisc\\Framework\\": "tests/misc/",
-            "KiwiSuiteTest\\Framework\\": "tests/src/"
+            "IxocreateMisc\\Framework\\": "tests/misc/",
+            "IxocreateTest\\Framework\\": "tests/src/"
         }
     },
     "scripts" : {

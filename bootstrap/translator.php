@@ -1,6 +1,6 @@
 <?php
-namespace KiwiSuite\Framework;
-/** @var \KiwiSuite\Translation\Config\Configurator $translator */
+namespace Ixocreate\Framework;
+/** @var \Ixocreate\Translation\Config\Configurator $translator */
 
 $translator->addExtractDirectory(getcwd() . '/templates');
 $translator->setExtractTarget(getcwd() . '/resources/translation/extracted.json');
