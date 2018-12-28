@@ -1,6 +1,6 @@
 # IXOCREATE framework
 
-[![Build Status](https://travis-ci.org/ixocreate/framework.svg?branch=master)](https://travis-ci.org/ixocreate/framework)
+[![Build Status](https://travis-ci.com/ixocreate/framework.svg?branch=master)](https://travis-ci.com/ixocreate/framework)
 [![Coverage Status](https://coveralls.io/repos/github/ixocreate/framework/badge.svg?branch=develop)](https://coveralls.io/github/ixocreate/framework?branch=develop)
 [![Packagist](https://img.shields.io/packagist/v/ixocreate/framework.svg)](https://packagist.org/packages/ixocreate/framework)
 [![Packagist Pre Release](https://img.shields.io/packagist/vpre/ixocreate/framework.svg)](https://packagist.org/packages/ixocreate/framework)
