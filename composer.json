@@ -29,6 +29,7 @@
         "ixocreate/intl": "dev-develop",
         "ixocreate/media": "dev-develop",
         "ixocreate/project-uri": "dev-develop",
+        "ixocreate/registry": "dev-develop",
         "ixocreate/resource": "dev-develop",
         "ixocreate/scheduler": "dev-develop",
         "ixocreate/schema": "dev-develop",
