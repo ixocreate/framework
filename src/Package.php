@@ -125,6 +125,7 @@ final class Package implements PackageInterface
             \Ixocreate\Translation\Package::class,
             \Ixocreate\Validation\Package::class,
             \Ixocreate\Filter\Package::class,
+            \Ixocreate\Registry\Package::class,
         ];
     }
 }
