@@ -118,7 +118,6 @@ final class Package implements PackageInterface
             \Ixocreate\Media\Package::class,
             \Ixocreate\Cms\Package::class,
             \Ixocreate\Intl\Package::class,
-            \Ixocreate\Scheduler\Package::class,
             \Ixocreate\Schema\Package::class,
             \Ixocreate\Resource\Package::class,
             \Ixocreate\Event\Package::class,
