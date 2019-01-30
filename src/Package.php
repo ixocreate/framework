@@ -119,6 +119,7 @@ final class Package implements PackageInterface
             \Ixocreate\Cms\Package::class,
             \Ixocreate\Intl\Package::class,
             \Ixocreate\Schema\Package::class,
+            \Ixocreate\Registry\Package::class,
             \Ixocreate\Resource\Package::class,
             \Ixocreate\Event\Package::class,
             \Ixocreate\Translation\Package::class,
