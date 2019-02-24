@@ -17,6 +17,7 @@
         "ixocreate/asset": "dev-develop",
         "ixocreate/cache-package": "dev-develop",
         "ixocreate/cms": "dev-develop",
+        "ixocreate/collection": "dev-develop",
         "ixocreate/command-bus": "dev-develop",
         "ixocreate/command-bus-filter": "dev-develop",
         "ixocreate/command-bus-validation": "dev-develop",
