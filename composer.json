@@ -40,8 +40,8 @@
         "ixocreate/servicemanager": "dev-develop"
     },
     "require-dev": {
-        "ixocreate/coding-standard": "^1.0",
-        "php-coveralls/php-coveralls": "^2.0",
+        "ixocreate/coding-standard": "^1.0.1",
+        "php-coveralls/php-coveralls": "^2.1",
         "phpunit/phpunit": "^6.0.6"
     },
     "autoload": {
