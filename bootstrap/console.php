@@ -1,7 +1,8 @@
 <?php
-namespace Ixocreate\Admin;
+declare(strict_types=1);
 
-/** @var ConsoleConfigurator $console */
+namespace Ixocreate\Framework;
+
 use Ixocreate\Application\Console\BootstrapGenerateCommand;
 use Ixocreate\Application\Console\BootstrapListCommand;
 use Ixocreate\Application\Console\ConfigGenerateCommand;
@@ -9,6 +10,9 @@ use Ixocreate\Application\Console\ConfigListCommand;
 use Ixocreate\Application\Console\PublishCommand;
 use Ixocreate\Application\Console\PublishListCommand;
 use Ixocreate\ApplicationConsole\ConsoleConfigurator;
+use Ixocreate\Framework\Console\SetupConsole;
+
+/** @var ConsoleConfigurator $console */
 
 $console->addCommand(BootstrapListCommand::class);
 $console->addCommand(BootstrapGenerateCommand::class);
@@ -16,6 +20,7 @@ $console->addCommand(PublishCommand::class);
 $console->addCommand(PublishListCommand::class);
 $console->addCommand(ConfigListCommand::class);
 $console->addCommand(ConfigGenerateCommand::class);
+$console->addCommand(SetupConsole::class);
 
 $console->addDirectory(getcwd() . '/src/App/Console', true);
 $console->addDirectory(getcwd() . '/src/Admin/Console', true);
