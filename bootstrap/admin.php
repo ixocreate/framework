@@ -1,6 +1,7 @@
 <?php
+declare(strict_types=1);
 
-namespace App;
+namespace Ixocreate\Framework;
 
 /** @var \Ixocreate\Admin\Config\AdminConfigurator $admin */
 

@@ -1,7 +1,10 @@
 <?php
+declare(strict_types=1);
+
 namespace Ixocreate\Framework;
 
-/** @var PublishDefinitionConfigurator $publishDefinition */
 use Ixocreate\Application\Publish\PublishDefinitionConfigurator;
+
+/** @var PublishDefinitionConfigurator $publishDefinition */
 
 $publishDefinition->add('migrations', 'migrations');

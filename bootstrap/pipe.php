@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 namespace Ixocreate\Framework;
 
 use Ixocreate\ApplicationHttp\ErrorHandling\Response\NotFoundHandler;
@@ -9,6 +11,7 @@ use Ixocreate\Template\Middleware\TemplateMiddleware;
 use Zend\Stratigility\Middleware\ErrorHandler;
 
 /** @var PipeConfigurator $pipe */
+
 $pipe->pipe(ErrorHandler::class, PHP_INT_MAX);
 $pipe->pipe(RootRequestWrapperMiddleware::class, PHP_INT_MAX);
 $pipe->pipe(ProjectUriCheckMiddleware::class, PHP_INT_MAX);
