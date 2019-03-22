@@ -54,8 +54,8 @@ class SetupConsole extends Command implements CommandInterface
 
         $projectUri = $io->ask('Project Uri');
 
-        $this->generateBootstrap('project_uri.php', $output);
-        \file_put_contents('bootstrap/project_uri.php', "\$projectUri->setMainUri('{$projectUri}');", FILE_APPEND);
+        $this->generateBootstrap('project-uri.php', $output);
+        \file_put_contents('bootstrap/project-uri.php', "\$projectUri->setMainUri('{$projectUri}');", FILE_APPEND);
 
         // asset
 
