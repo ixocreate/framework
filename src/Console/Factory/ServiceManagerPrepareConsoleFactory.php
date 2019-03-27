@@ -1,5 +1,12 @@
 <?php
+/**
+ * @link https://github.com/ixocreate
+ * @copyright IXOCREATE GmbH
+ * @license MIT License
+ */
+
 declare(strict_types=1);
+
 namespace Ixocreate\Framework\Console\Factory;
 
 use Ixocreate\Contract\ServiceManager\FactoryInterface;
@@ -8,7 +15,6 @@ use Ixocreate\Framework\Console\ServiceManagerPrepareConsole;
 
 final class ServiceManagerPrepareConsoleFactory implements FactoryInterface
 {
-
     /**
      * @param ServiceManagerInterface $container
      * @param $requestedName
