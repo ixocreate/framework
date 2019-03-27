@@ -10,6 +10,8 @@ use Ixocreate\Application\Console\ConfigListCommand;
 use Ixocreate\Application\Console\PublishCommand;
 use Ixocreate\Application\Console\PublishListCommand;
 use Ixocreate\ApplicationConsole\ConsoleConfigurator;
+use Ixocreate\Framework\Console\Factory\ServiceManagerPrepareConsoleFactory;
+use Ixocreate\Framework\Console\ServiceManagerPrepareConsole;
 use Ixocreate\Framework\Console\SetupConsole;
 
 /** @var ConsoleConfigurator $console */
@@ -21,6 +23,7 @@ $console->addCommand(PublishListCommand::class);
 $console->addCommand(ConfigListCommand::class);
 $console->addCommand(ConfigGenerateCommand::class);
 $console->addCommand(SetupConsole::class);
+$console->addCommand(ServiceManagerPrepareConsole::class, ServiceManagerPrepareConsoleFactory::class);
 
 $console->addDirectory(getcwd() . '/src/App/Console', true);
 $console->addDirectory(getcwd() . '/src/Admin/Console', true);
