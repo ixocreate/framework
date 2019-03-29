@@ -32,18 +32,22 @@ class DatabasePrepareConsole extends Command implements CommandInterface
      * @var ApplicationConfig
      */
     private $applicationConfig;
+
     /**
      * @var TypeConfig
      */
     private $typeConfig;
+
     /**
      * @var ConnectionSubManager
      */
     private $connectionSubManager;
+
     /**
      * @var RepositorySubManager
      */
     private $repositorySubManager;
+
     /**
      * @var EntityRepositoryMapping
      */
@@ -72,7 +76,7 @@ class DatabasePrepareConsole extends Command implements CommandInterface
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         (new FileWriter())->write(
-            rtrim($this->applicationConfig->getPersistCacheDirectory(), '/'),
+            \rtrim($this->applicationConfig->getPersistCacheDirectory(), '/'),
             $this->typeConfig
         );
 
@@ -88,7 +92,7 @@ class DatabasePrepareConsole extends Command implements CommandInterface
                 new DoctrineRepositoryFactory($this->repositorySubManager, $this->entityRepositoryMapping)
             );
 
-            $configuration->setProxyDir(sys_get_temp_dir());
+            $configuration->setProxyDir(\sys_get_temp_dir());
             $configuration->setProxyNamespace('Ixocreate\DoctrineProxy');
             $configuration->setMetadataCacheImpl(new PhpFileCache(
                 $this->applicationConfig->getPersistCacheDirectory() . 'database/doctrine_metadata'
@@ -103,7 +107,6 @@ class DatabasePrepareConsole extends Command implements CommandInterface
             $metadatas = $entityManager->getMetadataFactory()->getAllMetadata();
 
             foreach ($metadatas as $metadata) {
-
             }
         }
     }
