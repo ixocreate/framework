@@ -3,13 +3,13 @@ declare(strict_types=1);
 
 namespace Ixocreate\Framework;
 
-use Ixocreate\Application\Console\BootstrapGenerateCommand;
-use Ixocreate\Application\Console\BootstrapListCommand;
+use Ixocreate\Application\Bootstrap\Console\BootstrapGenerateCommand;
+use Ixocreate\Application\Bootstrap\Console\BootstrapListCommand;
 use Ixocreate\Application\Console\ConfigGenerateCommand;
 use Ixocreate\Application\Console\ConfigListCommand;
 use Ixocreate\Application\Console\ConsoleConfigurator;
-use Ixocreate\Application\Console\PublishCommand;
-use Ixocreate\Application\Console\PublishListCommand;
+use Ixocreate\Application\Publish\Console\PublishCommand;
+use Ixocreate\Application\Publish\Console\PublishListCommand;
 use Ixocreate\Framework\Console\ApplicationPrepareConsole;
 use Ixocreate\Framework\Console\DatabasePrepareConsole;
 use Ixocreate\Framework\Console\Factory\ServiceManagerPrepareConsoleFactory;
