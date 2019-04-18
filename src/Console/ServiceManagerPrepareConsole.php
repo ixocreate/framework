@@ -9,10 +9,11 @@ declare(strict_types=1);
 
 namespace Ixocreate\Framework\Package\Console;
 
-use Ixocreate\Application\Console\CommandInterface;;
+use Ixocreate\Application\Console\CommandInterface;
 use Ixocreate\ServiceManager\Generator\AutowireFactoryGenerator;
 use Ixocreate\ServiceManager\Generator\LazyLoadingFileGenerator;
 use Ixocreate\ServiceManager\ServiceManager;
+use Ixocreate\ServiceManager\ServiceManagerInterface;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -24,7 +25,7 @@ class ServiceManagerPrepareConsole extends Command implements CommandInterface
      */
     private $serviceManager;
 
-    public function __construct(ServiceManager $serviceManager)
+    public function __construct(ServiceManagerInterface $serviceManager)
     {
         parent::__construct(self::getCommandName());
         $this->serviceManager = $serviceManager;

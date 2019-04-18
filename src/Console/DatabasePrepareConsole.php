@@ -14,7 +14,7 @@ use Doctrine\ORM\Configuration;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Proxy\ProxyFactory;
 use Ixocreate\Application\ApplicationConfig;
-use Ixocreate\Application\Console\CommandInterface;;
+use Ixocreate\Application\Console\CommandInterface;
 use Ixocreate\Database\Package\Connection\Factory\ConnectionSubManager;
 use Ixocreate\Database\Package\ORM\Mapping\EntityMapper;
 use Ixocreate\Database\Package\Repository\EntityRepositoryMapping;

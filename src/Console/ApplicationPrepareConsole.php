@@ -10,8 +10,8 @@ declare(strict_types=1);
 namespace Ixocreate\Framework\Package\Console;
 
 use Ixocreate\Application\ApplicationConfig;
-use Ixocreate\Application\ServiceHandler;
-use Ixocreate\Application\Console\CommandInterface;;
+use Ixocreate\Application\Service\ServiceHandler;
+use Ixocreate\Application\Console\CommandInterface;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;

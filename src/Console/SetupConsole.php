@@ -9,7 +9,7 @@ declare(strict_types=1);
 
 namespace Ixocreate\Framework\Package\Console;
 
-use Ixocreate\Application\Console\CommandInterface;;
+use Ixocreate\Application\Console\CommandInterface;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Input\InputInterface;

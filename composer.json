@@ -27,7 +27,6 @@
         "ixocreate/log-package": "dev-develop",
         "ixocreate/mail-package": "dev-consolidate",
         "ixocreate/media-package": "dev-consolidate",
-        "ixocreate/project-uri": "dev-consolidate",
         "ixocreate/registry-package": "dev-consolidate",
         "ixocreate/resource-package": "dev-consolidate",
         "ixocreate/scheduler-package": "dev-consolidate",

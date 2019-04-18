@@ -9,7 +9,7 @@ declare(strict_types=1);
 
 namespace Ixocreate\Framework\Package;
 
-use Ixocreate\Application\ConfiguratorRegistryInterface;
+use Ixocreate\Application\Service\Configurator\ConfiguratorRegistryInterface;
 use Ixocreate\Application\Console\Bootstrap\ConsoleBootstrapItem;
 use Ixocreate\Application\Console\Console\ConsoleRunner;
 use Ixocreate\Application\Console\Console\Factory\ConsoleRunnerFactory;
@@ -19,12 +19,12 @@ use Ixocreate\Application\Http\Bootstrap\PipeBootstrapItem;
 use Ixocreate\Application\Http\Factory\FastRouterFactory;
 use Ixocreate\Application\Http\Factory\RequestHandlerRunnerFactory;
 use Ixocreate\Application\Http\Middleware\MiddlewareSubManager;
-use Ixocreate\Application\Package\PackageInterface;
+use Ixocreate\Application\PackageInterface;
 use Ixocreate\Application\Publish\Bootstrap\PublishBootstrapItem;
 use Ixocreate\Application\Publish\Bootstrap\PublishDefinitionBootstrapItem;
 use Ixocreate\Application\Service\Bootstrap\ServiceManagerBootstrapItem;
 use Ixocreate\Application\Service\ServiceManagerConfigurator;
-use Ixocreate\Application\Service\ServiceRegistryInterface;
+use Ixocreate\Application\Service\Registry\ServiceRegistryInterface;
 use Ixocreate\ServiceManager\ServiceManagerInterface;
 use Zend\Expressive\Router\FastRouteRouter;
 use Zend\HttpHandlerRunner\RequestHandlerRunner;
@@ -125,6 +125,9 @@ final class Package implements PackageInterface
             \Ixocreate\Validation\Package\Package::class,
             \Ixocreate\Filter\Package\Package::class,
             \Ixocreate\Cache\Package\Package::class,
+            \Ixocreate\Mail\Package\Package::class,
+            \Ixocreate\Scheduler\Package\Package::class,
+            \Ixocreate\Log\Package\Package::class,
         ];
     }
 }
