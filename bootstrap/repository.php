@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Ixocreate\Package\Framework;
+namespace Ixocreate\Framework\Package;
 
-use Ixocreate\Package\Database\Repository\RepositoryConfigurator;
+use Ixocreate\Database\Package\Repository\RepositoryConfigurator;
 
 /** @var RepositoryConfigurator $repository */
 

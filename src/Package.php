@@ -7,25 +7,25 @@
 
 declare(strict_types=1);
 
-namespace Ixocreate\Package\Framework;
+namespace Ixocreate\Framework\Package;
 
-use Ixocreate\Application\BootstrapItem\PublishBootstrapItem;
-use Ixocreate\Application\BootstrapItem\PublishDefinitionBootstrapItem;
-use Ixocreate\Application\Console\BootstrapItem\ConsoleBootstrapItem;
+use Ixocreate\Application\ConfiguratorRegistryInterface;
+use Ixocreate\Application\Console\Bootstrap\ConsoleBootstrapItem;
 use Ixocreate\Application\Console\Console\ConsoleRunner;
 use Ixocreate\Application\Console\Console\Factory\ConsoleRunnerFactory;
 use Ixocreate\Application\Console\ConsoleSubManager;
-use Ixocreate\Application\Http\BootstrapItem\MiddlewareBootstrapItem;
-use Ixocreate\Application\Http\BootstrapItem\PipeBootstrapItem;
+use Ixocreate\Application\Http\Bootstrap\MiddlewareBootstrapItem;
+use Ixocreate\Application\Http\Bootstrap\PipeBootstrapItem;
 use Ixocreate\Application\Http\Factory\FastRouterFactory;
 use Ixocreate\Application\Http\Factory\RequestHandlerRunnerFactory;
 use Ixocreate\Application\Http\Middleware\MiddlewareSubManager;
-use Ixocreate\Application\ConfiguratorRegistryInterface;
-use Ixocreate\Application\PackageInterface;
-use Ixocreate\Application\ServiceRegistryInterface;
+use Ixocreate\Application\Package\PackageInterface;
+use Ixocreate\Application\Publish\Bootstrap\PublishBootstrapItem;
+use Ixocreate\Application\Publish\Bootstrap\PublishDefinitionBootstrapItem;
+use Ixocreate\Application\Service\Bootstrap\ServiceManagerBootstrapItem;
+use Ixocreate\Application\Service\ServiceManagerConfigurator;
+use Ixocreate\Application\Service\ServiceRegistryInterface;
 use Ixocreate\ServiceManager\ServiceManagerInterface;
-use Ixocreate\ServiceManager\BootstrapItem\ServiceManagerBootstrapItem;
-use Ixocreate\ServiceManager\ServiceManagerConfigurator;
 use Zend\Expressive\Router\FastRouteRouter;
 use Zend\HttpHandlerRunner\RequestHandlerRunner;
 
@@ -107,25 +107,24 @@ final class Package implements PackageInterface
     public function getDependencies(): ?array
     {
         return [
-            \Ixocreate\Package\Entity\Package::class,
-            \Ixocreate\Package\Database\Package::class,
-            \Ixocreate\Package\Template\Package::class,
-            \Ixocreate\Package\ProjectUri\Package::class,
-            \Ixocreate\Package\Filesystem\Package::class,
-            \Ixocreate\Package\Type\Package::class,
-            \Ixocreate\Package\CommandBus\Package::class,
-            \Ixocreate\Package\Asset\Package::class,
-            \Ixocreate\Package\Media\Package::class,
-            \Ixocreate\Package\Cms\Package::class,
-            \Ixocreate\Package\Intl\Package::class,
-            \Ixocreate\Package\Schema\Package::class,
-            \Ixocreate\Package\Registry\Package::class,
-            \Ixocreate\Package\Resource\Package::class,
-            \Ixocreate\Package\Event\Package::class,
-            \Ixocreate\Package\Translation\Package::class,
-            \Ixocreate\Package\Validation\Package::class,
-            \Ixocreate\Package\Filter\Package::class,
-            \Ixocreate\Package\Cache\Package::class,
+            \Ixocreate\Entity\Package\Package::class,
+            \Ixocreate\Database\Package\Package::class,
+            \Ixocreate\Template\Package\Package::class,
+            \Ixocreate\Filesystem\Package\Package::class,
+            \Ixocreate\Type\Package\Package::class,
+            \Ixocreate\CommandBus\Package\Package::class,
+            \Ixocreate\Asset\Package\Package::class,
+            \Ixocreate\Media\Package\Package::class,
+            \Ixocreate\Cms\Package\Package::class,
+            \Ixocreate\Intl\Package\Package::class,
+            \Ixocreate\Schema\Package\Package::class,
+            \Ixocreate\Registry\Package\Package::class,
+            \Ixocreate\Resource\Package\Package::class,
+            \Ixocreate\Event\Package\Package::class,
+            \Ixocreate\Translation\Package\Package::class,
+            \Ixocreate\Validation\Package\Package::class,
+            \Ixocreate\Filter\Package\Package::class,
+            \Ixocreate\Cache\Package\Package::class,
         ];
     }
 }

@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Ixocreate\Package\Framework;
+namespace Ixocreate\Framework\Package;
 
-use Ixocreate\Package\Entity\Type\TypeConfigurator;
+use Ixocreate\Entity\Package\Type\TypeConfigurator;
 
 /** @var TypeConfigurator $type */
 

@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Ixocreate\Package\Framework;
+namespace Ixocreate\Framework\Package;
 
-use Ixocreate\Package\Cms\Block\BlockConfigurator;
+use Ixocreate\Cms\Package\Block\BlockConfigurator;
 
 /** @var BlockConfigurator $block */
 

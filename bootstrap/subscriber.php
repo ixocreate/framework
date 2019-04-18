@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
 
-namespace Ixocreate\Package\Framework;
+namespace Ixocreate\Framework\Package;
 
-/** @var \Ixocreate\Package\Event\Subscriber\SubscriberConfigurator $subscriber */
+/** @var \Ixocreate\Event\Package\Subscriber\SubscriberConfigurator $subscriber */
 
 $subscriber->addDirectory(getcwd() . '/src/App/Subscriber');

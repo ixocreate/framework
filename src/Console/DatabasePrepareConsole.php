@@ -7,7 +7,7 @@
 
 declare(strict_types=1);
 
-namespace Ixocreate\Package\Framework\Console;
+namespace Ixocreate\Framework\Package\Console;
 
 use Doctrine\Common\Cache\PhpFileCache;
 use Doctrine\ORM\Configuration;
@@ -15,13 +15,13 @@ use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Proxy\ProxyFactory;
 use Ixocreate\Application\ApplicationConfig;
 use Ixocreate\Application\Console\CommandInterface;;
-use Ixocreate\Package\Database\Connection\Factory\ConnectionSubManager;
-use Ixocreate\Package\Database\ORM\Mapping\EntityMapper;
-use Ixocreate\Package\Database\Repository\EntityRepositoryMapping;
-use Ixocreate\Package\Database\Repository\Factory\DoctrineRepositoryFactory;
-use Ixocreate\Package\Database\Repository\Factory\RepositorySubManager;
-use Ixocreate\Package\Database\Type\Generator\FileWriter;
-use Ixocreate\Package\Database\Type\TypeConfig;
+use Ixocreate\Database\Package\Connection\Factory\ConnectionSubManager;
+use Ixocreate\Database\Package\ORM\Mapping\EntityMapper;
+use Ixocreate\Database\Package\Repository\EntityRepositoryMapping;
+use Ixocreate\Database\Package\Repository\Factory\DoctrineRepositoryFactory;
+use Ixocreate\Database\Package\Repository\Factory\RepositorySubManager;
+use Ixocreate\Database\Package\Type\Generator\FileWriter;
+use Ixocreate\Database\Package\Type\TypeConfig;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;

@@ -7,7 +7,7 @@
 
 declare(strict_types=1);
 
-namespace Ixocreate\Package\Framework\Console;
+namespace Ixocreate\Framework\Package\Console;
 
 use Ixocreate\Application\ApplicationConfig;
 use Ixocreate\Application\ServiceHandler;

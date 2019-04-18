@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Ixocreate\Package\Framework;
+namespace Ixocreate\Framework\Package;
 
-use Ixocreate\Package\Cms\PageType\PageTypeConfigurator;
+use Ixocreate\Cms\Package\PageType\PageTypeConfigurator;
 
 /** @var PageTypeConfigurator $pageType */
 

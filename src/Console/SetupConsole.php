@@ -7,7 +7,7 @@
 
 declare(strict_types=1);
 
-namespace Ixocreate\Package\Framework\Console;
+namespace Ixocreate\Framework\Package\Console;
 
 use Ixocreate\Application\Console\CommandInterface;;
 use Symfony\Component\Console\Command\Command;
@@ -50,18 +50,18 @@ class SetupConsole extends Command implements CommandInterface
         \file_put_contents('config/local/database.config.php', $fileContent);
 
         // project uri
-        $io->section('Project Uri');
+        $io->section('Project ApplicationUri');
 
-        $projectUri = $io->ask('Project Uri');
+        $projectUri = $io->ask('Project ApplicationUri');
 
-        $this->generateBootstrap('project-uri.php', $output);
-        \file_put_contents('bootstrap/project-uri.php', "\$projectUri->setMainUri('{$projectUri}');", FILE_APPEND);
+        $this->generateBootstrap('application-uri.php', $output);
+        \file_put_contents('bootstrap/application-uri.php', "\$projectUri->setMainUri('{$projectUri}');", FILE_APPEND);
 
         // asset
 
         $io->section('Assets');
 
-        $assetUri = $io->ask('Asset Uri', 'assets');
+        $assetUri = $io->ask('Asset ApplicationUri', 'assets');
 
         $this->generateConfig('asset', $output);
 
@@ -79,7 +79,7 @@ class SetupConsole extends Command implements CommandInterface
 
         $io->section('Media');
 
-        $mediaUri = $io->ask('Media Uri', 'media');
+        $mediaUri = $io->ask('Media ApplicationUri', 'media');
 
         $this->generateConfig('media', $output);
 
