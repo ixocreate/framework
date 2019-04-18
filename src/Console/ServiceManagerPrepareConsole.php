@@ -7,9 +7,9 @@
 
 declare(strict_types=1);
 
-namespace Ixocreate\Framework\Console;
+namespace Ixocreate\Package\Framework\Console;
 
-use Ixocreate\Contract\Command\CommandInterface;
+use Ixocreate\Application\Console\CommandInterface;;
 use Ixocreate\ServiceManager\Generator\AutowireFactoryGenerator;
 use Ixocreate\ServiceManager\Generator\LazyLoadingFileGenerator;
 use Ixocreate\ServiceManager\ServiceManager;

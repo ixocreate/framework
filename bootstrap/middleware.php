@@ -1,15 +1,15 @@
 <?php
 declare(strict_types=1);
 
-namespace Ixocreate\Framework;
+namespace Ixocreate\Package\Framework;
 
-use Ixocreate\ApplicationHttp\ErrorHandling\Factory\ErrorHandlerFactory;
-use Ixocreate\ApplicationHttp\ErrorHandling\Factory\NotFoundHandlerFactory;
-use Ixocreate\ApplicationHttp\ErrorHandling\Response\NotFoundHandler;
-use Ixocreate\ApplicationHttp\Middleware\Factory\SegmentMiddlewareFactory;
-use Ixocreate\ApplicationHttp\Middleware\MiddlewareConfigurator;
-use Ixocreate\ApplicationHttp\Middleware\RootRequestWrapperMiddleware;
-use Ixocreate\ApplicationHttp\Middleware\SegmentMiddlewarePipe;
+use Ixocreate\Application\Http\ErrorHandling\Factory\ErrorHandlerFactory;
+use Ixocreate\Application\Http\ErrorHandling\Factory\NotFoundHandlerFactory;
+use Ixocreate\Application\Http\ErrorHandling\Response\NotFoundHandler;
+use Ixocreate\Application\Http\Middleware\Factory\SegmentMiddlewareFactory;
+use Ixocreate\Application\Http\Middleware\MiddlewareConfigurator;
+use Ixocreate\Application\Http\Middleware\RootRequestWrapperMiddleware;
+use Ixocreate\Application\Http\Middleware\SegmentMiddlewarePipe;
 use Zend\Stratigility\Middleware\ErrorHandler;
 
 /** @var MiddlewareConfigurator $middleware */

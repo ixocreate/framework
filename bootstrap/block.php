@@ -1,8 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace Ixocreate\Framework;
+namespace Ixocreate\Package\Framework;
 
-/** @var \Ixocreate\Cms\Block\BlockConfigurator $block */
+use Ixocreate\Package\Cms\Block\BlockConfigurator;
+
+/** @var BlockConfigurator $block */
 
 $block->addDirectory(getcwd() . '/src/App/Block', true);

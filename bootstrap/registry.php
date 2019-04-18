@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
 
-namespace Ixocreate\Framework;
+namespace Ixocreate\Package\Framework;
 
-/** @var \Ixocreate\Registry\Config\RegistryConfigurator $registry */
+/** @var \Ixocreate\Package\Registry\Config\RegistryConfigurator $registry */
 
 $registry->addDirectory(\getcwd() . '/src/Admin/Registry', true);

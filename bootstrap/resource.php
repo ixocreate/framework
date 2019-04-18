@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Ixocreate\Framework;
+namespace Ixocreate\Package\Framework;
 
-use Ixocreate\Resource\SubManager\ResourceConfigurator;
+use Ixocreate\Package\Resource\SubManager\ResourceConfigurator;
 
 /** @var ResourceConfigurator $resource */
 

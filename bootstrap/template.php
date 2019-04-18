@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Ixocreate\Framework;
+namespace Ixocreate\Package\Framework;
 
-use Ixocreate\Template\TemplateConfigurator;
+use Ixocreate\Package\Template\TemplateConfigurator;
 
 /** @var TemplateConfigurator $template */
 

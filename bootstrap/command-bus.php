@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace Ixocreate\Framework;
+namespace Ixocreate\Package\Framework;
 
-use Ixocreate\CommandBus\Configurator;
-use Ixocreate\CommandBus\Handler\ExecutionHandler;
-use Ixocreate\CommandBusFilter\FilterHandler;
-use Ixocreate\CommandBusValidation\ValidationHandler;
+use Ixocreate\Package\CommandBus\Configurator;
+use Ixocreate\Package\CommandBus\Handler\ExecutionHandler;
+use Ixocreate\Package\CommandBus\FilterHandler;
+use Ixocreate\Package\CommandBus\ValidationHandler;
 
 /** @var Configurator $commandBus */
 

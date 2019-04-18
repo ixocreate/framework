@@ -7,11 +7,11 @@
 
 declare(strict_types=1);
 
-namespace Ixocreate\Framework\Console\Factory;
+namespace Ixocreate\Package\Framework\Console\Factory;
 
-use Ixocreate\Contract\ServiceManager\FactoryInterface;
-use Ixocreate\Contract\ServiceManager\ServiceManagerInterface;
-use Ixocreate\Framework\Console\ServiceManagerPrepareConsole;
+use Ixocreate\ServiceManager\FactoryInterface;
+use Ixocreate\ServiceManager\ServiceManagerInterface;
+use Ixocreate\Package\Framework\Console\ServiceManagerPrepareConsole;
 
 final class ServiceManagerPrepareConsoleFactory implements FactoryInterface
 {

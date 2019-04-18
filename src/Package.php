@@ -7,23 +7,23 @@
 
 declare(strict_types=1);
 
-namespace Ixocreate\Framework;
+namespace Ixocreate\Package\Framework;
 
 use Ixocreate\Application\BootstrapItem\PublishBootstrapItem;
 use Ixocreate\Application\BootstrapItem\PublishDefinitionBootstrapItem;
-use Ixocreate\ApplicationConsole\BootstrapItem\ConsoleBootstrapItem;
-use Ixocreate\ApplicationConsole\Console\ConsoleRunner;
-use Ixocreate\ApplicationConsole\Console\Factory\ConsoleRunnerFactory;
-use Ixocreate\ApplicationConsole\ConsoleSubManager;
-use Ixocreate\ApplicationHttp\BootstrapItem\MiddlewareBootstrapItem;
-use Ixocreate\ApplicationHttp\BootstrapItem\PipeBootstrapItem;
-use Ixocreate\ApplicationHttp\Factory\FastRouterFactory;
-use Ixocreate\ApplicationHttp\Factory\RequestHandlerRunnerFactory;
-use Ixocreate\ApplicationHttp\Middleware\MiddlewareSubManager;
-use Ixocreate\Contract\Application\ConfiguratorRegistryInterface;
-use Ixocreate\Contract\Application\PackageInterface;
-use Ixocreate\Contract\Application\ServiceRegistryInterface;
-use Ixocreate\Contract\ServiceManager\ServiceManagerInterface;
+use Ixocreate\Application\Console\BootstrapItem\ConsoleBootstrapItem;
+use Ixocreate\Application\Console\Console\ConsoleRunner;
+use Ixocreate\Application\Console\Console\Factory\ConsoleRunnerFactory;
+use Ixocreate\Application\Console\ConsoleSubManager;
+use Ixocreate\Application\Http\BootstrapItem\MiddlewareBootstrapItem;
+use Ixocreate\Application\Http\BootstrapItem\PipeBootstrapItem;
+use Ixocreate\Application\Http\Factory\FastRouterFactory;
+use Ixocreate\Application\Http\Factory\RequestHandlerRunnerFactory;
+use Ixocreate\Application\Http\Middleware\MiddlewareSubManager;
+use Ixocreate\Application\ConfiguratorRegistryInterface;
+use Ixocreate\Application\PackageInterface;
+use Ixocreate\Application\ServiceRegistryInterface;
+use Ixocreate\ServiceManager\ServiceManagerInterface;
 use Ixocreate\ServiceManager\BootstrapItem\ServiceManagerBootstrapItem;
 use Ixocreate\ServiceManager\ServiceManagerConfigurator;
 use Zend\Expressive\Router\FastRouteRouter;
@@ -107,24 +107,24 @@ final class Package implements PackageInterface
     public function getDependencies(): ?array
     {
         return [
-            \Ixocreate\Entity\Package::class,
-            \Ixocreate\Database\Package::class,
-            \Ixocreate\Template\Package::class,
-            \Ixocreate\ProjectUri\Package::class,
-            \Ixocreate\Filesystem\Package::class,
-            \Ixocreate\CommonTypes\Package::class,
-            \Ixocreate\CommandBus\Package::class,
-            \Ixocreate\Asset\Package::class,
-            \Ixocreate\Media\Package::class,
-            \Ixocreate\Cms\Package::class,
-            \Ixocreate\Intl\Package::class,
-            \Ixocreate\Schema\Package::class,
-            \Ixocreate\Registry\Package::class,
-            \Ixocreate\Resource\Package::class,
-            \Ixocreate\Event\Package::class,
-            \Ixocreate\Translation\Package::class,
-            \Ixocreate\Validation\Package::class,
-            \Ixocreate\Filter\Package::class,
+            \Ixocreate\Package\Entity\Package::class,
+            \Ixocreate\Package\Database\Package::class,
+            \Ixocreate\Package\Template\Package::class,
+            \Ixocreate\Package\ProjectUri\Package::class,
+            \Ixocreate\Package\Filesystem\Package::class,
+            \Ixocreate\Package\Type\Package::class,
+            \Ixocreate\Package\CommandBus\Package::class,
+            \Ixocreate\Package\Asset\Package::class,
+            \Ixocreate\Package\Media\Package::class,
+            \Ixocreate\Package\Cms\Package::class,
+            \Ixocreate\Package\Intl\Package::class,
+            \Ixocreate\Package\Schema\Package::class,
+            \Ixocreate\Package\Registry\Package::class,
+            \Ixocreate\Package\Resource\Package::class,
+            \Ixocreate\Package\Event\Package::class,
+            \Ixocreate\Package\Translation\Package::class,
+            \Ixocreate\Package\Validation\Package::class,
+            \Ixocreate\Package\Filter\Package::class,
             \Ixocreate\Package\Cache\Package::class,
         ];
     }

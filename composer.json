@@ -1,6 +1,6 @@
 {
     "name": "ixocreate/framework",
-    "description": "IXOCREATE framework composition",
+    "description": "IXOCREATE Framework",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -12,47 +12,45 @@
     "prefer-stable": true,
     "require": {
         "php": "^7.1",
-        "ixocreate/application-console": "dev-develop",
-        "ixocreate/application-http": "dev-develop",
-        "ixocreate/asset": "dev-develop",
-        "ixocreate/cache-package": "dev-develop",
-        "ixocreate/cms": "dev-develop",
-        "ixocreate/collection": "dev-develop",
-        "ixocreate/command-bus": "dev-develop",
-        "ixocreate/command-bus-filter": "dev-develop",
-        "ixocreate/command-bus-validation": "dev-develop",
-        "ixocreate/common-types": "dev-develop",
-        "ixocreate/config": "dev-develop",
-        "ixocreate/database": "dev-develop",
-        "ixocreate/entity": "dev-develop",
-        "ixocreate/event": "dev-develop",
-        "ixocreate/filesystem": "dev-develop",
-        "ixocreate/filter": "dev-develop",
-        "ixocreate/intl": "dev-develop",
-        "ixocreate/media": "dev-develop",
-        "ixocreate/project-uri": "dev-develop",
-        "ixocreate/registry": "dev-develop",
-        "ixocreate/resource": "dev-develop",
-        "ixocreate/schema": "dev-develop",
-        "ixocreate/template": "dev-develop",
-        "ixocreate/translation": "dev-develop",
-        "ixocreate/validation": "dev-develop",
-        "ixocreate/servicemanager": "dev-develop"
+        "ixocreate/admin-package": "dev-consolidate",
+        "ixocreate/application": "dev-consolidate",
+        "ixocreate/asset-package": "dev-consolidate",
+        "ixocreate/cache-package": "dev-consolidate",
+        "ixocreate/cms-package": "dev-consolidate",
+        "ixocreate/command-bus-package": "dev-consolidate",
+        "ixocreate/database-package": "dev-consolidate",
+        "ixocreate/entity-package": "dev-consolidate",
+        "ixocreate/event-package": "dev-consolidate",
+        "ixocreate/filesystem-package": "dev-consolidate",
+        "ixocreate/filter-package": "dev-consolidate",
+        "ixocreate/intl-package": "dev-consolidate",
+        "ixocreate/log-package": "dev-consolidate",
+        "ixocreate/mail-package": "dev-consolidate",
+        "ixocreate/media-package": "dev-consolidate",
+        "ixocreate/project-uri": "dev-consolidate",
+        "ixocreate/registry-package": "dev-consolidate",
+        "ixocreate/resource-package": "dev-consolidate",
+        "ixocreate/scheduler-package": "dev-consolidate",
+        "ixocreate/schema-package": "dev-consolidate",
+        "ixocreate/template-package": "dev-consolidate",
+        "ixocreate/translation-package": "dev-consolidate",
+        "ixocreate/type-package": "dev-consolidate",
+        "ixocreate/validation-package": "dev-consolidate"
     },
     "require-dev": {
-        "ixocreate/coding-standard": "^1.0.1",
+        "ixocreate/coding-standard": "^1.0",
         "php-coveralls/php-coveralls": "^2.1",
         "phpunit/phpunit": "^7.0"
     },
     "autoload": {
         "psr-4": {
-            "Ixocreate\\Framework\\": "src/"
+            "Ixocreate\\Package\\Framework": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "IxocreateMisc\\Framework\\": "tests/misc/",
-            "IxocreateTest\\Framework\\": "tests/src/"
+            "Ixocreate\\Misc\\Framework\\": "tests/misc/",
+            "Ixocreate\\Test\\Framework\\": "tests/src/"
         }
     },
     "scripts": {

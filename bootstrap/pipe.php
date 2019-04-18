@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace Ixocreate\Framework;
+namespace Ixocreate\Package\Framework;
 
-use Ixocreate\ApplicationHttp\ErrorHandling\Response\NotFoundHandler;
-use Ixocreate\ApplicationHttp\Middleware\RootRequestWrapperMiddleware;
-use Ixocreate\ApplicationHttp\Pipe\PipeConfigurator;
-use Ixocreate\ProjectUri\Middleware\ProjectUriCheckMiddleware;
-use Ixocreate\Template\Middleware\TemplateMiddleware;
+use Ixocreate\Application\Http\ErrorHandling\Response\NotFoundHandler;
+use Ixocreate\Application\Http\Middleware\RootRequestWrapperMiddleware;
+use Ixocreate\Application\Http\Pipe\PipeConfigurator;
+use Ixocreate\Package\ProjectUri\Middleware\ProjectUriCheckMiddleware;
+use Ixocreate\Package\Template\Middleware\TemplateMiddleware;
 use Zend\Stratigility\Middleware\ErrorHandler;
 
 /** @var PipeConfigurator $pipe */

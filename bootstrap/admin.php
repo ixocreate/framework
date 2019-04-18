@@ -1,8 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace Ixocreate\Framework;
+namespace Ixocreate\Package\Framework;
 
-/** @var \Ixocreate\Admin\Config\AdminConfigurator $admin */
+use Ixocreate\Package\Admin\Config\AdminConfigurator;
+
+/** @var AdminConfigurator $admin */
 
 $admin->addDashboardProviderDirectory(getcwd() . '/src/Admin/Dashboard', true);
