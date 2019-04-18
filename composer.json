@@ -24,7 +24,7 @@
         "ixocreate/filesystem-package": "dev-consolidate",
         "ixocreate/filter-package": "dev-consolidate",
         "ixocreate/intl-package": "dev-consolidate",
-        "ixocreate/log-package": "dev-consolidate",
+        "ixocreate/log-package": "dev-develop",
         "ixocreate/mail-package": "dev-consolidate",
         "ixocreate/media-package": "dev-consolidate",
         "ixocreate/project-uri": "dev-consolidate",
