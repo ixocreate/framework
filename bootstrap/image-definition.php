@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Ixocreate\Framework\Package;
+namespace Ixocreate\Framework;
 
-use Ixocreate\Media\Package\ImageDefinition\ImageDefinitionConfigurator;
+use Ixocreate\Media\ImageDefinition\ImageDefinitionConfigurator;
 
 /** @var ImageDefinitionConfigurator $imageDefinition */
 /**

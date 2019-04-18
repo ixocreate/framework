@@ -7,7 +7,7 @@
 
 declare(strict_types=1);
 
-namespace Ixocreate\Framework\Package\Console;
+namespace Ixocreate\Framework\Console;
 
 use Ixocreate\Application\Console\CommandInterface;
 use Ixocreate\ServiceManager\Generator\AutowireFactoryGenerator;

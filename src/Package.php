@@ -7,7 +7,7 @@
 
 declare(strict_types=1);
 
-namespace Ixocreate\Framework\Package;
+namespace Ixocreate\Framework;
 
 use Ixocreate\Application\Service\Configurator\ConfiguratorRegistryInterface;
 use Ixocreate\Application\Console\Bootstrap\ConsoleBootstrapItem;
@@ -107,27 +107,27 @@ final class Package implements PackageInterface
     public function getDependencies(): ?array
     {
         return [
-            \Ixocreate\Entity\Package\Package::class,
-            \Ixocreate\Database\Package\Package::class,
-            \Ixocreate\Template\Package\Package::class,
-            \Ixocreate\Filesystem\Package\Package::class,
-            \Ixocreate\Type\Package\Package::class,
-            \Ixocreate\CommandBus\Package\Package::class,
-            \Ixocreate\Asset\Package\Package::class,
-            \Ixocreate\Media\Package\Package::class,
-            \Ixocreate\Cms\Package\Package::class,
-            \Ixocreate\Intl\Package\Package::class,
-            \Ixocreate\Schema\Package\Package::class,
-            \Ixocreate\Registry\Package\Package::class,
-            \Ixocreate\Resource\Package\Package::class,
-            \Ixocreate\Event\Package\Package::class,
-            \Ixocreate\Translation\Package\Package::class,
-            \Ixocreate\Validation\Package\Package::class,
-            \Ixocreate\Filter\Package\Package::class,
-            \Ixocreate\Cache\Package\Package::class,
-            \Ixocreate\Mail\Package\Package::class,
-            \Ixocreate\Scheduler\Package\Package::class,
-            \Ixocreate\Log\Package\Package::class,
+            \Ixocreate\Entity\Package::class,
+            \Ixocreate\Database\Package::class,
+            \Ixocreate\Template\Package::class,
+            \Ixocreate\Filesystem\Package::class,
+            \Ixocreate\Type\Package::class,
+            \Ixocreate\CommandBus\Package::class,
+            \Ixocreate\Asset\Package::class,
+            \Ixocreate\Media\Package::class,
+            \Ixocreate\Cms\Package::class,
+            \Ixocreate\Intl\Package::class,
+            \Ixocreate\Schema\Package::class,
+            \Ixocreate\Registry\Package::class,
+            \Ixocreate\Resource\Package::class,
+            \Ixocreate\Event\Package::class,
+            \Ixocreate\Translation\Package::class,
+            \Ixocreate\Validation\Package::class,
+            \Ixocreate\Filter\Package::class,
+            \Ixocreate\Cache\Package::class,
+            \Ixocreate\Mail\Package::class,
+            \Ixocreate\Scheduler\Package::class,
+            \Ixocreate\Log\Package::class,
         ];
     }
 }

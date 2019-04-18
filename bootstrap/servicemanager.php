@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Ixocreate\Framework\Package;
+namespace Ixocreate\Framework;
 
 use Ixocreate\Application\Http\ErrorHandling\Factory\ErrorResponseGeneratorFactory;
 use Ixocreate\Application\Http\ErrorHandling\Response\ErrorResponseGenerator;

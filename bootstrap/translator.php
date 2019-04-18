@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Ixocreate\Framework\Package;
+namespace Ixocreate\Framework;
 
-/** @var \Ixocreate\Translation\Package\Config\Configurator $translator */
+/** @var \Ixocreate\Translation\Config\Configurator $translator */
 
 $translator->addExtractDirectory(getcwd() . '/templates');
 $translator->addExtractDirectory(getcwd() . '/src');

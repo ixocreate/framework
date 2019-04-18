@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Ixocreate\Framework\Package;
+namespace Ixocreate\Framework;
 
-use Ixocreate\Admin\Package\Config\AdminConfigurator;
+use Ixocreate\Admin\Config\AdminConfigurator;
 
 /** @var AdminConfigurator $admin */
 

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Ixocreate\Framework\Package;
+namespace Ixocreate\Framework;
 
 use Ixocreate\Application\Console\BootstrapGenerateCommand;
 use Ixocreate\Application\Console\BootstrapListCommand;
@@ -10,11 +10,11 @@ use Ixocreate\Application\Console\ConfigListCommand;
 use Ixocreate\Application\Console\PublishCommand;
 use Ixocreate\Application\Console\PublishListCommand;
 use Ixocreate\Application\Console\ConsoleConfigurator;
-use Ixocreate\Framework\Package\Console\ApplicationPrepareConsole;
-use Ixocreate\Framework\Package\Console\DatabasePrepareConsole;
-use Ixocreate\Framework\Package\Console\Factory\ServiceManagerPrepareConsoleFactory;
-use Ixocreate\Framework\Package\Console\ServiceManagerPrepareConsole;
-use Ixocreate\Framework\Package\Console\SetupConsole;
+use Ixocreate\Framework\Console\ApplicationPrepareConsole;
+use Ixocreate\Framework\Console\DatabasePrepareConsole;
+use Ixocreate\Framework\Console\Factory\ServiceManagerPrepareConsoleFactory;
+use Ixocreate\Framework\Console\ServiceManagerPrepareConsole;
+use Ixocreate\Framework\Console\SetupConsole;
 
 /** @var ConsoleConfigurator $console */
 
