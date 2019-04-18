@@ -3,7 +3,7 @@ return [
     'migrations' => [
         'type' => 'local',
         'options' => [
-            'root' => getcwd() . '/resources/migrations'
+            'root' => getcwd() . '/resources/migrations',
         ],
     ],
 ];

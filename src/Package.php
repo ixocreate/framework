@@ -9,22 +9,23 @@ declare(strict_types=1);
 
 namespace Ixocreate\Framework;
 
-use Ixocreate\Application\Service\Configurator\ConfiguratorRegistryInterface;
-use Ixocreate\Application\Console\Bootstrap\ConsoleBootstrapItem;
+use Ixocreate\Application\ConfiguratorRegistryInterface;
 use Ixocreate\Application\Console\Console\ConsoleRunner;
 use Ixocreate\Application\Console\Console\Factory\ConsoleRunnerFactory;
+use Ixocreate\Application\Console\ConsoleBootstrapItem;
 use Ixocreate\Application\Console\ConsoleSubManager;
-use Ixocreate\Application\Http\Bootstrap\MiddlewareBootstrapItem;
-use Ixocreate\Application\Http\Bootstrap\PipeBootstrapItem;
 use Ixocreate\Application\Http\Factory\FastRouterFactory;
 use Ixocreate\Application\Http\Factory\RequestHandlerRunnerFactory;
+use Ixocreate\Application\Http\Middleware\MiddlewareBootstrapItem;
 use Ixocreate\Application\Http\Middleware\MiddlewareSubManager;
+use Ixocreate\Application\Http\Pipe\PipeBootstrapItem;
 use Ixocreate\Application\PackageInterface;
-use Ixocreate\Application\Publish\Bootstrap\PublishBootstrapItem;
-use Ixocreate\Application\Publish\Bootstrap\PublishDefinitionBootstrapItem;
-use Ixocreate\Application\Service\Bootstrap\ServiceManagerBootstrapItem;
+use Ixocreate\Application\Publish\PublishBootstrapItem;
+use Ixocreate\Application\Publish\PublishDefinitionBootstrapItem;
+use Ixocreate\Application\Service\ServiceManagerBootstrapItem;
 use Ixocreate\Application\Service\ServiceManagerConfigurator;
-use Ixocreate\Application\Service\Registry\ServiceRegistryInterface;
+use Ixocreate\Application\Service\ServiceRegistryInterface;
+use Ixocreate\Application\Uri\ApplicationUriBootstrapItem;
 use Ixocreate\ServiceManager\ServiceManagerInterface;
 use Zend\Expressive\Router\FastRouteRouter;
 use Zend\HttpHandlerRunner\RequestHandlerRunner;
@@ -92,7 +93,12 @@ final class Package implements PackageInterface
      */
     public function getBootstrapItems(): ?array
     {
+        /**
+         * register the application's bootstrap items
+         * TODO: the application should probably do that by itself
+         */
         return [
+            ApplicationUriBootstrapItem::class,
             PublishDefinitionBootstrapItem::class,
             PublishBootstrapItem::class,
             MiddlewareBootstrapItem::class,
@@ -106,6 +112,9 @@ final class Package implements PackageInterface
      */
     public function getDependencies(): ?array
     {
+        /**
+         * register all the framework's default packages
+         */
         return [
             \Ixocreate\Entity\Package::class,
             \Ixocreate\Database\Package::class,

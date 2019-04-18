@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Ixocreate\Framework;
 
-use Ixocreate\Admin\Config\AdminConfigurator;
+use Ixocreate\Admin\AdminConfigurator;
 
 /** @var AdminConfigurator $admin */
 

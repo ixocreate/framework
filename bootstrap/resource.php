@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Ixocreate\Framework;
 
-use Ixocreate\Resource\SubManager\ResourceConfigurator;
+use Ixocreate\Resource\ResourceConfigurator;
 
 /** @var ResourceConfigurator $resource */
 

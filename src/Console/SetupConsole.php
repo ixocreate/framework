@@ -111,7 +111,7 @@ class SetupConsole extends Command implements CommandInterface
 
         $arguments = [
             'command' => 'config:generate',
-            'file'    => $file,
+            'file' => $file,
         ];
 
         $commandInput = new ArrayInput($arguments);
@@ -124,7 +124,7 @@ class SetupConsole extends Command implements CommandInterface
 
         $arguments = [
             'command' => 'bootstrap:generate',
-            'file'    => $file,
+            'file' => $file,
         ];
 
         $commandInput = new ArrayInput($arguments);

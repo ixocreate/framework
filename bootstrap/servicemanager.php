@@ -5,7 +5,7 @@ namespace Ixocreate\Framework;
 
 use Ixocreate\Application\Http\ErrorHandling\Factory\ErrorResponseGeneratorFactory;
 use Ixocreate\Application\Http\ErrorHandling\Response\ErrorResponseGenerator;
-use Ixocreate\ServiceManager\ServiceManagerConfigurator;
+use Ixocreate\Application\Service\ServiceManagerConfigurator;
 
 /** @var ServiceManagerConfigurator $serviceManager */
 

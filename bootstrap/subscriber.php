@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace Ixocreate\Framework;
 
-/** @var \Ixocreate\Event\Subscriber\SubscriberConfigurator $subscriber */
+use Ixocreate\Event\Subscriber\SubscriberConfigurator;
+
+/** @var SubscriberConfigurator $subscriber */
 
 $subscriber->addDirectory(getcwd() . '/src/App/Subscriber');

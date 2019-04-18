@@ -3,7 +3,9 @@ declare(strict_types=1);
 
 namespace Ixocreate\Framework;
 
-/** @var \Ixocreate\Translation\Config\Configurator $translator */
+use Ixocreate\Translation\TranslationConfigurator;
+
+/** @var TranslationConfigurator $translator */
 
 $translator->addExtractDirectory(getcwd() . '/templates');
 $translator->addExtractDirectory(getcwd() . '/src');

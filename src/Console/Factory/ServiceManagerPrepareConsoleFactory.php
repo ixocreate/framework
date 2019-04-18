@@ -9,9 +9,9 @@ declare(strict_types=1);
 
 namespace Ixocreate\Framework\Console\Factory;
 
+use Ixocreate\Framework\Console\ServiceManagerPrepareConsole;
 use Ixocreate\ServiceManager\FactoryInterface;
 use Ixocreate\ServiceManager\ServiceManagerInterface;
-use Ixocreate\Framework\Console\ServiceManagerPrepareConsole;
 
 final class ServiceManagerPrepareConsoleFactory implements FactoryInterface
 {

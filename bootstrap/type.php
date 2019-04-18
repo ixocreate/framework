@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Ixocreate\Framework;
 
-use Ixocreate\Entity\Type\TypeConfigurator;
+use Ixocreate\Type\TypeConfigurator;
 
 /** @var TypeConfigurator $type */
 
