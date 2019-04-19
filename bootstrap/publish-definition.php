@@ -5,6 +5,6 @@ namespace Ixocreate\Framework;
 
 use Ixocreate\Application\Publish\PublishDefinitionConfigurator;
 
-/** @var PublishDefinitionConfigurator $publish */
+/** @var PublishDefinitionConfigurator $publishDefinition */
 
-$publish->add('migrations', 'migrations');
+$publishDefinition->add('migrations', 'migrations');
