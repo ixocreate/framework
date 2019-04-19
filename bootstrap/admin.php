@@ -1,4 +1,10 @@
 <?php
+/**
+ * @link https://github.com/ixocreate
+ * @copyright IXOCREATE GmbH
+ * @license MIT License
+ */
+
 declare(strict_types=1);
 
 namespace Ixocreate\Framework;
@@ -6,5 +12,4 @@ namespace Ixocreate\Framework;
 use Ixocreate\Admin\AdminConfigurator;
 
 /** @var AdminConfigurator $admin */
-
-$admin->addDashboardProviderDirectory(getcwd() . '/src/Admin/Dashboard', true);
+$admin->addDashboardProviderDirectory(\getcwd() . '/src/Admin/Dashboard', true);

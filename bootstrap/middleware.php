@@ -1,4 +1,10 @@
 <?php
+/**
+ * @link https://github.com/ixocreate
+ * @copyright IXOCREATE GmbH
+ * @license MIT License
+ */
+
 declare(strict_types=1);
 
 namespace Ixocreate\Framework;
@@ -14,13 +20,12 @@ use Ixocreate\Application\Uri\Middleware\ApplicationUriCheckMiddleware;
 use Zend\Stratigility\Middleware\ErrorHandler;
 
 /** @var MiddlewareConfigurator $middleware */
-
 $middleware->addMiddleware(ApplicationUriCheckMiddleware::class);
 
-$middleware->addDirectory(getcwd() . '/src/App/Action', true);
-$middleware->addDirectory(getcwd() . '/src/Admin/Action', true);
-$middleware->addDirectory(getcwd() . '/src/App/Middleware', true);
-$middleware->addDirectory(getcwd() . '/src/Admin/Middleware', true);
+$middleware->addDirectory(\getcwd() . '/src/App/Action', true);
+$middleware->addDirectory(\getcwd() . '/src/Admin/Action', true);
+$middleware->addDirectory(\getcwd() . '/src/App/Middleware', true);
+$middleware->addDirectory(\getcwd() . '/src/Admin/Middleware', true);
 
 
 //ErrorHandler & NotFoundHandler
@@ -29,4 +34,3 @@ $middleware->addMiddleware(NotFoundHandler::class, NotFoundHandlerFactory::class
 $middleware->addMiddleware(RootRequestWrapperMiddleware::class);
 
 $middleware->addMiddleware(SegmentMiddlewarePipe::class, SegmentMiddlewareFactory::class);
-
