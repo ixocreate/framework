@@ -10,10 +10,10 @@ declare(strict_types=1);
 namespace Ixocreate\Framework;
 
 use Ixocreate\Application\Configurator\ConfiguratorRegistryInterface;
-use Ixocreate\Application\Console\Console\ConsoleRunner;
-use Ixocreate\Application\Console\Console\Factory\ConsoleRunnerFactory;
 use Ixocreate\Application\Console\ConsoleBootstrapItem;
+use Ixocreate\Application\Console\ConsoleRunner;
 use Ixocreate\Application\Console\ConsoleSubManager;
+use Ixocreate\Application\Console\Factory\ConsoleRunnerFactory;
 use Ixocreate\Application\Http\Factory\FastRouterFactory;
 use Ixocreate\Application\Http\Factory\RequestHandlerRunnerFactory;
 use Ixocreate\Application\Http\Middleware\MiddlewareBootstrapItem;
