@@ -1,6 +1,15 @@
 <?php
+/**
+ * @link https://github.com/ixocreate
+ * @copyright IXOCREATE GmbH
+ * @license MIT License
+ */
+
+declare(strict_types=1);
+
 namespace Ixocreate\Framework;
 
-/** @var \Ixocreate\Event\Subscriber\SubscriberConfigurator $subscriber */
+use Ixocreate\Event\Subscriber\SubscriberConfigurator;
 
-$subscriber->addDirectory(getcwd() . '/src/App/Subscriber');
+/** @var SubscriberConfigurator $subscriber */
+$subscriber->addDirectory(\getcwd() . '/src/App/Subscriber');

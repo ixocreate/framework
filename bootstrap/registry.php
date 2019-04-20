@@ -9,7 +9,7 @@ declare(strict_types=1);
 
 namespace Ixocreate\Framework;
 
-use Ixocreate\Admin\AdminConfigurator;
+use Ixocreate\Registry\RegistryConfigurator;
 
-/** @var AdminConfigurator $admin */
-$admin->addDashboardProviderDirectory(\getcwd() . '/src/Admin/Dashboard', true);
+/** @var RegistryConfigurator $registry */
+$registry->addDirectory(\getcwd() . '/src/Admin/Registry', true);

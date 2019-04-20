@@ -9,7 +9,7 @@ declare(strict_types=1);
 
 namespace Ixocreate\Framework;
 
-use Ixocreate\Admin\AdminConfigurator;
+use Ixocreate\Media\Handler\MediaHandlerConfigurator;
 
-/** @var AdminConfigurator $admin */
-$admin->addDashboardProviderDirectory(\getcwd() . '/src/Admin/Dashboard', true);
+/** @var MediaHandlerConfigurator $media */
+$media->addDirectory(\getcwd() . '/src/App/Media', true);

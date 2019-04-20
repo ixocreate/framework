@@ -1,4 +1,15 @@
 <?php
+/**
+ * @link https://github.com/ixocreate
+ * @copyright IXOCREATE GmbH
+ * @license MIT License
+ */
+
+declare(strict_types=1);
+
 namespace Ixocreate\Framework;
-/** @var \Ixocreate\Cms\Block\BlockConfigurator $block */
-$block->addDirectory(getcwd() . '/src/App/Block', true);
+
+use Ixocreate\Cms\Block\BlockConfigurator;
+
+/** @var BlockConfigurator $block */
+$block->addDirectory(\getcwd() . '/src/App/Block', true);

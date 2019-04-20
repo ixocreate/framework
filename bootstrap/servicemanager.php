@@ -1,10 +1,17 @@
 <?php
-declare(strict_types=1);
-namespace Framework;
+/**
+ * @link https://github.com/ixocreate
+ * @copyright IXOCREATE GmbH
+ * @license MIT License
+ */
 
-use Ixocreate\ApplicationHttp\ErrorHandling\Factory\ErrorResponseGeneratorFactory;
-use Ixocreate\ApplicationHttp\ErrorHandling\Response\ErrorResponseGenerator;
-use Ixocreate\ServiceManager\ServiceManagerConfigurator;
+declare(strict_types=1);
+
+namespace Ixocreate\Framework;
+
+use Ixocreate\Application\Http\ErrorHandling\Factory\ErrorResponseGeneratorFactory;
+use Ixocreate\Application\Http\ErrorHandling\Response\ErrorResponseGenerator;
+use Ixocreate\Application\Service\ServiceManagerConfigurator;
 
 /** @var ServiceManagerConfigurator $serviceManager */
 $serviceManager->addFactory(ErrorResponseGenerator::class, ErrorResponseGeneratorFactory::class);

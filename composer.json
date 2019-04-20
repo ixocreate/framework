@@ -1,6 +1,6 @@
 {
     "name": "ixocreate/framework",
-    "description": "IXOCREATE framework composition",
+    "description": "IXOCREATE Framework",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -12,35 +12,17 @@
     "prefer-stable": true,
     "require": {
         "php": "^7.1",
-        "ixocreate/application-console": "=1.0.0-alpha2",
-        "ixocreate/application-http": "=1.0.0-alpha2",
-        "ixocreate/asset": "=1.0.0-alpha2",
-        "ixocreate/cache-package": "=1.0.0-alpha1",
-        "ixocreate/cms": "=1.0.0-alpha2",
-        "ixocreate/command-bus": "=1.0.0-alpha2",
-        "ixocreate/command-bus-filter": "=1.0.0-alpha2",
-        "ixocreate/command-bus-validation": "=1.0.0-alpha2",
-        "ixocreate/common-types": "=1.0.0-alpha2",
-        "ixocreate/config": "=1.0.0-alpha2",
-        "ixocreate/database": "=1.0.0-alpha2",
-        "ixocreate/entity": "=1.0.0-alpha2",
-        "ixocreate/event": "=1.0.0-alpha2",
-        "ixocreate/filesystem": "=1.0.0-alpha2",
-        "ixocreate/filter": "=1.0.0-alpha2",
-        "ixocreate/intl": "=1.0.0-alpha2",
-        "ixocreate/media": "=1.0.0-alpha2",
-        "ixocreate/project-uri": "=1.0.0-alpha2",
-        "ixocreate/resource": "=1.0.0-alpha2",
-        "ixocreate/schema": "=1.0.0-alpha2",
-        "ixocreate/template": "=1.0.0-alpha2",
-        "ixocreate/translation": "=1.0.0-alpha2",
-        "ixocreate/validation": "=1.0.0-alpha2",
-        "ixocreate/servicemanager": "=1.0.0-alpha2"
+        "ixocreate/admin-package": "^0.1",
+        "ixocreate/cms-package": "^0.1",
+        "ixocreate/mail-package": "^0.1",
+        "ixocreate/media-package": "^0.1",
+        "ixocreate/registry-package": "^0.1",
+        "ixocreate/translation-package": "^0.1"
     },
     "require-dev": {
-        "ixocreate/coding-standard": "^1.0",
-        "php-coveralls/php-coveralls": "^2.0",
-        "phpunit/phpunit": "^6.0.6"
+        "ixocreate/coding-standard": "^2.0",
+        "php-coveralls/php-coveralls": "^2.1",
+        "phpunit/phpunit": "^7.0"
     },
     "autoload": {
         "psr-4": {
@@ -49,8 +31,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "IxocreateMisc\\Framework\\": "tests/misc/",
-            "IxocreateTest\\Framework\\": "tests/src/"
+            "Ixocreate\\Misc\\Framework\\": "tests/misc/",
+            "Ixocreate\\Test\\Framework\\": "tests/src/"
         }
     },
     "scripts": {

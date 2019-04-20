@@ -9,23 +9,24 @@ declare(strict_types=1);
 
 namespace Ixocreate\Framework;
 
-use Ixocreate\Application\BootstrapItem\PublishBootstrapItem;
-use Ixocreate\Application\BootstrapItem\PublishDefinitionBootstrapItem;
-use Ixocreate\ApplicationConsole\BootstrapItem\ConsoleBootstrapItem;
-use Ixocreate\ApplicationConsole\Console\ConsoleRunner;
-use Ixocreate\ApplicationConsole\Console\Factory\ConsoleRunnerFactory;
-use Ixocreate\ApplicationConsole\ConsoleSubManager;
-use Ixocreate\ApplicationHttp\BootstrapItem\MiddlewareBootstrapItem;
-use Ixocreate\ApplicationHttp\BootstrapItem\PipeBootstrapItem;
-use Ixocreate\ApplicationHttp\Factory\FastRouterFactory;
-use Ixocreate\ApplicationHttp\Factory\RequestHandlerRunnerFactory;
-use Ixocreate\ApplicationHttp\Middleware\MiddlewareSubManager;
-use Ixocreate\Contract\Application\ConfiguratorRegistryInterface;
-use Ixocreate\Contract\Application\PackageInterface;
-use Ixocreate\Contract\Application\ServiceRegistryInterface;
-use Ixocreate\Contract\ServiceManager\ServiceManagerInterface;
-use Ixocreate\ServiceManager\BootstrapItem\ServiceManagerBootstrapItem;
-use Ixocreate\ServiceManager\ServiceManagerConfigurator;
+use Ixocreate\Application\Configurator\ConfiguratorRegistryInterface;
+use Ixocreate\Application\Console\ConsoleBootstrapItem;
+use Ixocreate\Application\Console\ConsoleRunner;
+use Ixocreate\Application\Console\ConsoleSubManager;
+use Ixocreate\Application\Console\Factory\ConsoleRunnerFactory;
+use Ixocreate\Application\Http\Factory\FastRouterFactory;
+use Ixocreate\Application\Http\Factory\RequestHandlerRunnerFactory;
+use Ixocreate\Application\Http\Middleware\MiddlewareBootstrapItem;
+use Ixocreate\Application\Http\Middleware\MiddlewareSubManager;
+use Ixocreate\Application\Http\Pipe\PipeBootstrapItem;
+use Ixocreate\Application\Package\PackageInterface;
+use Ixocreate\Application\Publish\PublishBootstrapItem;
+use Ixocreate\Application\Publish\PublishDefinitionBootstrapItem;
+use Ixocreate\Application\Service\ServiceManagerBootstrapItem;
+use Ixocreate\Application\Service\ServiceManagerConfigurator;
+use Ixocreate\Application\Service\ServiceRegistryInterface;
+use Ixocreate\Application\Uri\ApplicationUriBootstrapItem;
+use Ixocreate\ServiceManager\ServiceManagerInterface;
 use Zend\Expressive\Router\FastRouteRouter;
 use Zend\HttpHandlerRunner\RequestHandlerRunner;
 
@@ -92,7 +93,12 @@ final class Package implements PackageInterface
      */
     public function getBootstrapItems(): ?array
     {
+        /**
+         * register the application's bootstrap items
+         * TODO: the application should probably do that by itself
+         */
         return [
+            ApplicationUriBootstrapItem::class,
             PublishDefinitionBootstrapItem::class,
             PublishBootstrapItem::class,
             MiddlewareBootstrapItem::class,
@@ -106,24 +112,31 @@ final class Package implements PackageInterface
      */
     public function getDependencies(): ?array
     {
+        /**
+         * register all the framework's default packages
+         */
         return [
             \Ixocreate\Entity\Package::class,
             \Ixocreate\Database\Package::class,
             \Ixocreate\Template\Package::class,
-            \Ixocreate\ProjectUri\Package::class,
             \Ixocreate\Filesystem\Package::class,
-            \Ixocreate\CommonTypes\Package::class,
+            \Ixocreate\Type\Package::class,
             \Ixocreate\CommandBus\Package::class,
             \Ixocreate\Asset\Package::class,
             \Ixocreate\Media\Package::class,
             \Ixocreate\Cms\Package::class,
             \Ixocreate\Intl\Package::class,
             \Ixocreate\Schema\Package::class,
+            \Ixocreate\Registry\Package::class,
             \Ixocreate\Resource\Package::class,
             \Ixocreate\Event\Package::class,
             \Ixocreate\Translation\Package::class,
             \Ixocreate\Validation\Package::class,
-            \Ixocreate\Filter\Package::class
+            \Ixocreate\Filter\Package::class,
+            \Ixocreate\Cache\Package::class,
+            \Ixocreate\Mail\Package::class,
+            // \Ixocreate\Scheduler\Package::class,
+            // \Ixocreate\Log\Package::class,
         ];
     }
 }
