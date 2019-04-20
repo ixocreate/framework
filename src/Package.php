@@ -135,8 +135,8 @@ final class Package implements PackageInterface
             \Ixocreate\Filter\Package::class,
             \Ixocreate\Cache\Package::class,
             \Ixocreate\Mail\Package::class,
-            \Ixocreate\Scheduler\Package::class,
-            \Ixocreate\Log\Package::class,
+            // \Ixocreate\Scheduler\Package::class,
+            // \Ixocreate\Log\Package::class,
         ];
     }
 }

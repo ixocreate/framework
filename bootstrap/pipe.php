@@ -1,4 +1,10 @@
 <?php
+/**
+ * @link https://github.com/ixocreate
+ * @copyright IXOCREATE GmbH
+ * @license MIT License
+ */
+
 declare(strict_types=1);
 
 namespace Ixocreate\Framework;
@@ -11,7 +17,6 @@ use Ixocreate\Template\Middleware\TemplateMiddleware;
 use Zend\Stratigility\Middleware\ErrorHandler;
 
 /** @var PipeConfigurator $pipe */
-
 $pipe->pipe(ErrorHandler::class, PHP_INT_MAX);
 $pipe->pipe(RootRequestWrapperMiddleware::class, PHP_INT_MAX);
 $pipe->pipe(ApplicationUriCheckMiddleware::class, PHP_INT_MAX);

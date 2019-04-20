@@ -1,4 +1,10 @@
 <?php
+/**
+ * @link https://github.com/ixocreate
+ * @copyright IXOCREATE GmbH
+ * @license MIT License
+ */
+
 declare(strict_types=1);
 
 namespace Ixocreate\Framework;
@@ -17,7 +23,6 @@ use Ixocreate\Framework\Console\ServiceManagerPrepareConsole;
 use Ixocreate\Framework\Console\SetupConsole;
 
 /** @var ConsoleConfigurator $console */
-
 $console->addCommand(BootstrapListCommand::class);
 $console->addCommand(BootstrapGenerateCommand::class);
 $console->addCommand(PublishCommand::class);
@@ -29,5 +34,5 @@ $console->addCommand(ApplicationPrepareConsole::class);
 $console->addCommand(DatabasePrepareConsole::class);
 $console->addCommand(ServiceManagerPrepareConsole::class, ServiceManagerPrepareConsoleFactory::class);
 
-$console->addDirectory(getcwd() . '/src/App/Console', true);
-$console->addDirectory(getcwd() . '/src/Admin/Console', true);
+$console->addDirectory(\getcwd() . '/src/App/Console', true);
+$console->addDirectory(\getcwd() . '/src/Admin/Console', true);
