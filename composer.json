@@ -13,26 +13,11 @@
     "require": {
         "php": "^7.1",
         "ixocreate/admin-package": "^0.1",
-        "ixocreate/application": "^0.1",
-        "ixocreate/asset-package": "^0.1",
-        "ixocreate/cache-package": "^0.1",
         "ixocreate/cms-package": "^0.1",
-        "ixocreate/command-bus-package": "^0.1",
-        "ixocreate/database-package": "^0.1",
-        "ixocreate/entity-package": "^0.1",
-        "ixocreate/event-package": "^0.1",
-        "ixocreate/filesystem-package": "^0.1",
-        "ixocreate/filter-package": "^0.1",
-        "ixocreate/intl-package": "^0.1",
         "ixocreate/mail-package": "^0.1",
         "ixocreate/media-package": "^0.1",
         "ixocreate/registry-package": "^0.1",
-        "ixocreate/resource-package": "^0.1",
-        "ixocreate/schema-package": "^0.1",
-        "ixocreate/template-package": "^0.1",
-        "ixocreate/translation-package": "^0.1",
-        "ixocreate/type-package": "^0.1",
-        "ixocreate/validation-package": "^0.1"
+        "ixocreate/translation-package": "^0.1"
     },
     "require-dev": {
         "ixocreate/coding-standard": "^2.0",
