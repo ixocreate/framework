@@ -113,7 +113,7 @@ final class Package implements PackageInterface
     public function getDependencies(): ?array
     {
         /**
-         * register all the framework's default packages
+         * require all the framework's default packages
          */
         return [
             \Ixocreate\Entity\Package::class,
