@@ -9,4 +9,6 @@ declare(strict_types=1);
 
 namespace Ixocreate\Framework;
 
+use Ixocreate\CommandBus\CommandBusConfigurator;
+
 /** @var CommandBusConfigurator $commandBus */
