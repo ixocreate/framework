@@ -6,6 +6,7 @@
 
 ### Changed
 - Upgrade to Admin Package v0.2
+- Remove command bus defaults configuration (moved to Command Bus Package)
 
 ## [v0.1.0 (2019-04-19)](https://github.com/ixocreate/framework/compare/master...0.1.0)
 
