@@ -16,7 +16,7 @@
         "ixocreate/asset-package": "^0.1",
         "ixocreate/cms-package": "^0.2",
         "ixocreate/mail-package": "^0.1",
-        "ixocreate/media-package": "^0.1",
+        "ixocreate/media-package": "^0.2",
         "ixocreate/registry-package": "^0.2",
         "ixocreate/translation-package": "^0.2"
     },
