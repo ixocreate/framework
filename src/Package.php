@@ -30,7 +30,8 @@ use Ixocreate\ServiceManager\ServiceManagerInterface;
 use Zend\Expressive\Router\FastRouteRouter;
 use Zend\HttpHandlerRunner\RequestHandlerRunner;
 
-final class Package implements PackageInterface {
+final class Package implements PackageInterface
+{
     /**
      * @param ConfiguratorRegistryInterface $configuratorRegistry
      */
