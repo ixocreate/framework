@@ -16,9 +16,12 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 
-class SetupConsole extends Command implements CommandInterface {
+class SetupConsole extends Command implements CommandInterface
+{
     public function __construct()
-    { parent::__construct(self::getCommandName()); }
+    {
+        parent::__construct(self::getCommandName());
+    }
 
     public static function getCommandName()
     {
