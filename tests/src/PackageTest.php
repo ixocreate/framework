@@ -54,15 +54,36 @@ class PackageTest extends TestCase
 
         $this->assertSame([
             ApplicationUriBootstrapItem::class,
-            PublishDefinitionBootstrapItem::class,
-            PublishBootstrapItem::class,
+            ConsoleBootstrapItem::class,
             MiddlewareBootstrapItem::class,
             PipeBootstrapItem::class,
-            ConsoleBootstrapItem::class,
+            PublishBootstrapItem::class,
+            PublishDefinitionBootstrapItem::class,
         ], $package->getBootstrapItems());
         $this->assertDirectoryExists($package->getConfigDirectory());
         $this->assertNull($package->getConfigProvider());
-        $this->assertNotNull($package->getDependencies());
+        $this->assertSame([
+            \Ixocreate\Asset\Package::class,
+            \Ixocreate\Cache\Package::class,
+            \Ixocreate\Cms\Package::class,
+            \Ixocreate\CommandBus\Package::class,
+            \Ixocreate\Database\Package::class,
+            \Ixocreate\Entity\Package::class,
+            \Ixocreate\Event\Package::class,
+            \Ixocreate\Filesystem\Package::class,
+            \Ixocreate\Filter\Package::class,
+            \Ixocreate\Intl\Package::class,
+            // \Ixocreate\Log\Package::class,
+            \Ixocreate\Mail\Package::class,
+            \Ixocreate\Media\Package::class,
+            \Ixocreate\Registry\Package::class,
+            \Ixocreate\Resource\Package::class,
+            // \Ixocreate\Scheduler\Package::class,
+            \Ixocreate\Schema\Package::class,
+            \Ixocreate\Template\Package::class,
+            \Ixocreate\Translation\Package::class,
+            \Ixocreate\Validation\Package::class,
+        ], $package->getDependencies());
         $this->assertDirectoryExists($package->getBootstrapDirectory());
     }
 }
