@@ -3,6 +3,7 @@
 ## [Unreleased](https://github.com/ixocreate/framework/compare/0.2.1...develop)
 ### Changed
 - Upgrade to Application v0.2: remove PublishDefinitionBootstrapItem
+- Upgrade to Admin Package v0.3
 
 ## [v0.2.1 (2019-04-25)](https://github.com/ixocreate/framework/compare/0.2.0...0.2.1)
 ### Changed
