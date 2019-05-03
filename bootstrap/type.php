@@ -9,7 +9,7 @@ declare(strict_types=1);
 
 namespace Ixocreate\Framework;
 
-use Ixocreate\Type\TypeConfigurator;
+use Ixocreate\Schema\Type\TypeConfigurator;
 
 /** @var TypeConfigurator $type */
 $type->addDirectory(\getcwd() . '/src/App/Type', true);
