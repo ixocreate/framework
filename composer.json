@@ -10,9 +10,9 @@
     ],
     "require": {
         "php": "^7.1",
-        "ixocreate/asset-package": "^0.1",
         "ixocreate/admin-package": "^0.3",
         "ixocreate/application": "^0.2",
+        "ixocreate/asset-package": "^0.1",
         "ixocreate/cms-package": "^0.2",
         "ixocreate/mail-package": "^0.1",
         "ixocreate/media-package": "^0.2",
