@@ -12,5 +12,4 @@ namespace Ixocreate\Framework;
 use Ixocreate\Application\Publish\PublishConfigurator;
 
 /** @var PublishConfigurator $publish */
-
-$publish->addDefinition('migrations',  \getcwd() . '/resources/migrations');
+$publish->addDefinition('migrations', \getcwd() . '/resources/migrations');
