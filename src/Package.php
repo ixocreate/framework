@@ -21,7 +21,6 @@ use Ixocreate\Application\Http\Middleware\MiddlewareSubManager;
 use Ixocreate\Application\Http\Pipe\PipeBootstrapItem;
 use Ixocreate\Application\Package\PackageInterface;
 use Ixocreate\Application\Publish\PublishBootstrapItem;
-use Ixocreate\Application\Publish\PublishDefinitionBootstrapItem;
 use Ixocreate\Application\Service\ServiceManagerBootstrapItem;
 use Ixocreate\Application\Service\ServiceManagerConfigurator;
 use Ixocreate\Application\Service\ServiceRegistryInterface;
@@ -85,7 +84,7 @@ final class Package implements PackageInterface
      */
     public function getConfigDirectory(): ?string
     {
-        return __DIR__ . '/../config';
+        return null;
     }
 
     /**
@@ -99,7 +98,6 @@ final class Package implements PackageInterface
          */
         return [
             ApplicationUriBootstrapItem::class,
-            PublishDefinitionBootstrapItem::class,
             PublishBootstrapItem::class,
             MiddlewareBootstrapItem::class,
             PipeBootstrapItem::class,

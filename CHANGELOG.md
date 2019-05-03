@@ -2,6 +2,9 @@
 
 ## [Unreleased](https://github.com/ixocreate/framework/compare/0.2.1...develop)
 
+### Changed
+- Upgrade Publish config
+
 ## [v0.2.1 (2019-04-25)](https://github.com/ixocreate/framework/compare/0.2.0...0.2.1)
 
 ### Changed
