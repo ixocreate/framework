@@ -58,7 +58,7 @@ class PackageTest extends TestCase
             PipeBootstrapItem::class,
             PublishBootstrapItem::class,
         ], $package->getBootstrapItems());
-        $this->assertDirectoryExists($package->getConfigDirectory());
+        $this->assertNull($package->getConfigDirectory());
         $this->assertNull($package->getConfigProvider());
         $this->assertSame([
             \Ixocreate\Asset\Package::class,
