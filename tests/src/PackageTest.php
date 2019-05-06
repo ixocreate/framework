@@ -58,7 +58,6 @@ class PackageTest extends TestCase
             MiddlewareBootstrapItem::class,
             PipeBootstrapItem::class,
             PublishBootstrapItem::class,
-            PublishDefinitionBootstrapItem::class,
         ], $package->getBootstrapItems());
         $this->assertDirectoryExists($package->getConfigDirectory());
         $this->assertNull($package->getConfigProvider());
