@@ -14,7 +14,6 @@ use Ixocreate\Application\Console\ConsoleBootstrapItem;
 use Ixocreate\Application\Http\Middleware\MiddlewareBootstrapItem;
 use Ixocreate\Application\Http\Pipe\PipeBootstrapItem;
 use Ixocreate\Application\Publish\PublishBootstrapItem;
-use Ixocreate\Application\Publish\PublishDefinitionBootstrapItem;
 use Ixocreate\Application\Service\ServiceManagerBootstrapItem;
 use Ixocreate\Application\Service\ServiceRegistryInterface;
 use Ixocreate\Application\Uri\ApplicationUriBootstrapItem;
