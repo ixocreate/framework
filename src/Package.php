@@ -21,7 +21,6 @@ use Ixocreate\Application\Http\Middleware\MiddlewareSubManager;
 use Ixocreate\Application\Http\Pipe\PipeBootstrapItem;
 use Ixocreate\Application\Package\PackageInterface;
 use Ixocreate\Application\Publish\PublishBootstrapItem;
-use Ixocreate\Application\Publish\PublishDefinitionBootstrapItem;
 use Ixocreate\Application\Service\ServiceManagerBootstrapItem;
 use Ixocreate\Application\Service\ServiceManagerConfigurator;
 use Ixocreate\Application\Service\ServiceRegistryInterface;
@@ -85,7 +84,7 @@ final class Package implements PackageInterface
      */
     public function getConfigDirectory(): ?string
     {
-        return __DIR__ . '/../config';
+        return null;
     }
 
     /**
@@ -99,11 +98,10 @@ final class Package implements PackageInterface
          */
         return [
             ApplicationUriBootstrapItem::class,
-            PublishDefinitionBootstrapItem::class,
-            PublishBootstrapItem::class,
+            ConsoleBootstrapItem::class,
             MiddlewareBootstrapItem::class,
             PipeBootstrapItem::class,
-            ConsoleBootstrapItem::class,
+            PublishBootstrapItem::class,
         ];
     }
 
@@ -116,27 +114,26 @@ final class Package implements PackageInterface
          * require all the framework's default packages
          */
         return [
-            \Ixocreate\Entity\Package::class,
-            \Ixocreate\Database\Package::class,
-            \Ixocreate\Template\Package::class,
-            \Ixocreate\Filesystem\Package::class,
-            \Ixocreate\Type\Package::class,
-            \Ixocreate\CommandBus\Package::class,
             \Ixocreate\Asset\Package::class,
-            \Ixocreate\Media\Package::class,
+            \Ixocreate\Cache\Package::class,
             \Ixocreate\Cms\Package::class,
+            \Ixocreate\CommandBus\Package::class,
+            \Ixocreate\Database\Package::class,
+            \Ixocreate\Entity\Package::class,
+            \Ixocreate\Event\Package::class,
+            \Ixocreate\Filesystem\Package::class,
+            \Ixocreate\Filter\Package::class,
             \Ixocreate\Intl\Package::class,
-            \Ixocreate\Schema\Package::class,
+            // \Ixocreate\Log\Package::class,
+            \Ixocreate\Mail\Package::class,
+            \Ixocreate\Media\Package::class,
             \Ixocreate\Registry\Package::class,
             \Ixocreate\Resource\Package::class,
-            \Ixocreate\Event\Package::class,
+            // \Ixocreate\Scheduler\Package::class,
+            \Ixocreate\Schema\Package::class,
+            \Ixocreate\Template\Package::class,
             \Ixocreate\Translation\Package::class,
             \Ixocreate\Validation\Package::class,
-            \Ixocreate\Filter\Package::class,
-            \Ixocreate\Cache\Package::class,
-            \Ixocreate\Mail\Package::class,
-            // \Ixocreate\Scheduler\Package::class,
-            // \Ixocreate\Log\Package::class,
         ];
     }
 }
