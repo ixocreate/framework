@@ -1,6 +1,8 @@
 # Release Notes
 
 ## [Unreleased](https://github.com/ixocreate/framework/compare/0.3.0...develop)
+### Changed
+- Removed Asset Package dependency (moved to Admin Package)
 
 ## [v0.3.0 (2019-05-06)](https://github.com/ixocreate/framework/compare/0.2.1...0.3.0)
 ### Changed
