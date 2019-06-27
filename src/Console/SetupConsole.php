@@ -1,7 +1,7 @@
 <?php
 /**
  * @link https://github.com/ixocreate
- * @copyright IXOCREATE GmbH
+ * @copyright IXOLIT GmbH
  * @license MIT License
  */
 
@@ -10,6 +10,7 @@ declare(strict_types=1);
 namespace Ixocreate\Framework\Console;
 
 use Ixocreate\Application\Console\CommandInterface;
+use Ramsey\Uuid\Uuid;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Input\InputInterface;
@@ -55,42 +56,35 @@ class SetupConsole extends Command implements CommandInterface
         $projectUri = $io->ask('Project ApplicationUri');
 
         $this->generateBootstrap('application-uri.php', $output);
-        \file_put_contents('bootstrap/application-uri.php', "\$projectUri->setMainUri('{$projectUri}');", FILE_APPEND);
+        \file_put_contents('bootstrap/application-uri.php', "\$applicationUri->setMainUri('{$projectUri}');", FILE_APPEND);
+        \rename('bootstrap/application-uri.php', 'bootstrap/local/application-uri.php');
 
         // asset
-
-        $io->section('Assets');
-
-        $assetUri = $io->ask('Asset ApplicationUri', 'assets');
-
         $this->generateConfig('asset', $output);
 
         $fileContent = \file_get_contents('config/local/asset.config.php');
-        $fileContent = \str_replace("'url' => []", "'url' => ['{$assetUri}']", $fileContent);
+        $fileContent = \str_replace("'url' => []", "'url' => ['/assets']", $fileContent);
         \file_put_contents('config/local/asset.config.php', $fileContent);
 
-
-        $confirm = $io->confirm('Create Symlink?', true);
-        if ($confirm) {
-            \symlink('../resources/assets', 'public/assets');
-        }
+        \symlink('../resources/assets', 'public/assets');
 
         // media
 
-        $io->section('Media');
+        \symlink('../data/media', 'public/media');
 
-        $mediaUri = $io->ask('Media ApplicationUri', 'media');
+        //Admin Secret
+        $uuid = Uuid::uuid4()->toString();
 
-        $this->generateConfig('media', $output);
+        $adminContent = <<<EOD
+<?php
+declare(strict_types=1);
 
-        $fileContent = \file_get_contents('config/local/media.config.php');
-        $fileContent = \str_replace("'uri' => ''", "'uri' => '{$mediaUri}'", $fileContent);
-        \file_put_contents('config/local/media.config.php', $fileContent);
+namespace App;
 
-        $confirm = $io->confirm('Create Symlink?', true);
-        if ($confirm) {
-            \symlink('../data/media', 'public/media');
-        }
+use Ixocreate\Admin\AdminConfigurator;
+\$admin->setSecret('{$uuid}');
+EOD;
+
 
         // end
 
