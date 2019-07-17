@@ -2,6 +2,10 @@
 
 ## [Unreleased](https://github.com/ixocreate/framework/compare/0.3.2...develop)
 
+## [v0.4.0 (2019-07-17)](https://github.com/ixocreate/framework/compare/0.3.2...0.4.0)
+### Changed
+- Upgrade to Media Package v0.4:
+
 ## [v0.3.2 (2019-06-27)](https://github.com/ixocreate/framework/compare/0.3.1...0.3.2)
 ### Fixed
 - Setup Command
