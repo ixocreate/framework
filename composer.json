@@ -17,7 +17,7 @@
         "ixocreate/application": "^0.2",
         "ixocreate/cms-package": "^0.3",
         "ixocreate/mail-package": "^0.1",
-        "ixocreate/media-package": "^0.3",
+        "ixocreate/media-package": "^0.4",
         "ixocreate/registry-package": "^0.3",
         "ixocreate/translation-package": "^0.3"
     },
