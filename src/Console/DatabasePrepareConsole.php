@@ -85,7 +85,7 @@ class DatabasePrepareConsole extends Command implements CommandInterface
 
             $configuration = new Configuration();
             $configuration->setMetadataDriverImpl(
-                new EntityMapper($this->repositorySubManager, $this->entityRepositoryMapping)
+                new EntityMapper($this->entityRepositoryMapping)
             );
 
             $configuration->setRepositoryFactory(
