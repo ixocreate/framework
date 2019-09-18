@@ -1,6 +1,10 @@
 # Release Notes
 
-## [Unreleased](https://github.com/ixocreate/framework/compare/0.3.2...develop)
+## [Unreleased](https://github.com/ixocreate/framework/compare/0.3.3...develop)
+
+## [v0.3.3 (2019-09-18)](https://github.com/ixocreate/framework/compare/0.3.2...0.3.3)
+### Fixed
+- Fix DatabasePrepareConsole command
 
 ## [v0.3.2 (2019-06-27)](https://github.com/ixocreate/framework/compare/0.3.1...0.3.2)
 ### Fixed
