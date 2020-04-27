@@ -9,7 +9,7 @@ declare(strict_types=1);
 
 namespace Ixocreate\Framework;
 
-use Ixocreate\Translation\TranslationConfigurator;
+use Ixocreate\Translation\Config\TranslationConfigurator;
 
 /** @var TranslationConfigurator $translator */
 $translator->addExtractDirectory(\getcwd() . '/templates');
