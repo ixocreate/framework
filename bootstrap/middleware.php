@@ -17,7 +17,7 @@ use Ixocreate\Application\Http\Middleware\MiddlewareConfigurator;
 use Ixocreate\Application\Http\Middleware\RootRequestWrapperMiddleware;
 use Ixocreate\Application\Http\Middleware\SegmentMiddlewarePipe;
 use Ixocreate\Application\Uri\Middleware\ApplicationUriCheckMiddleware;
-use Zend\Stratigility\Middleware\ErrorHandler;
+use Laminas\Stratigility\Middleware\ErrorHandler;
 
 /** @var MiddlewareConfigurator $middleware */
 $middleware->addMiddleware(ApplicationUriCheckMiddleware::class);

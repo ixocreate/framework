@@ -14,7 +14,7 @@ use Ixocreate\Application\Http\Middleware\RootRequestWrapperMiddleware;
 use Ixocreate\Application\Http\Pipe\PipeConfigurator;
 use Ixocreate\Application\Uri\Middleware\ApplicationUriCheckMiddleware;
 use Ixocreate\Template\Middleware\TemplateMiddleware;
-use Zend\Stratigility\Middleware\ErrorHandler;
+use Laminas\Stratigility\Middleware\ErrorHandler;
 
 /** @var PipeConfigurator $pipe */
 $pipe->pipe(ErrorHandler::class, PHP_INT_MAX);

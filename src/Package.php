@@ -19,17 +19,16 @@ use Ixocreate\Application\Http\Factory\RequestHandlerRunnerFactory;
 use Ixocreate\Application\Http\Middleware\MiddlewareBootstrapItem;
 use Ixocreate\Application\Http\Middleware\MiddlewareSubManager;
 use Ixocreate\Application\Http\Pipe\PipeBootstrapItem;
+use Ixocreate\Application\Package\ConfigureAwareInterface;
 use Ixocreate\Application\Package\PackageInterface;
 use Ixocreate\Application\Publish\PublishBootstrapItem;
-use Ixocreate\Application\Service\ServiceManagerBootstrapItem;
-use Ixocreate\Application\Service\ServiceManagerConfigurator;
-use Ixocreate\Application\Service\ServiceRegistryInterface;
+use Ixocreate\Application\ServiceManager\ServiceManagerBootstrapItem;
+use Ixocreate\Application\ServiceManager\ServiceManagerConfigurator;
 use Ixocreate\Application\Uri\ApplicationUriBootstrapItem;
-use Ixocreate\ServiceManager\ServiceManagerInterface;
-use Zend\Expressive\Router\FastRouteRouter;
-use Zend\HttpHandlerRunner\RequestHandlerRunner;
+use Laminas\HttpHandlerRunner\RequestHandlerRunner;
+use Mezzio\Router\FastRouteRouter;
 
-final class Package implements PackageInterface
+final class Package implements PackageInterface, ConfigureAwareInterface
 {
     /**
      * @param ConfiguratorRegistryInterface $configuratorRegistry
@@ -48,30 +47,6 @@ final class Package implements PackageInterface
     }
 
     /**
-     * @param ServiceRegistryInterface $serviceRegistry
-     */
-    public function addServices(ServiceRegistryInterface $serviceRegistry): void
-    {
-    }
-
-    /**
-     * @return array|null
-     */
-    public function getConfigProvider(): ?array
-    {
-        return null;
-    }
-
-    /**
-     * @param ServiceManagerInterface $serviceManager
-     * @throws \Psr\Container\ContainerExceptionInterface
-     * @throws \Psr\Container\NotFoundExceptionInterface
-     */
-    public function boot(ServiceManagerInterface $serviceManager): void
-    {
-    }
-
-    /**
      * @return null|string
      */
     public function getBootstrapDirectory(): ?string
@@ -80,17 +55,9 @@ final class Package implements PackageInterface
     }
 
     /**
-     * @return null|string
+     * @return array
      */
-    public function getConfigDirectory(): ?string
-    {
-        return null;
-    }
-
-    /**
-     * @return array|null
-     */
-    public function getBootstrapItems(): ?array
+    public function getBootstrapItems(): array
     {
         /**
          * register the application's bootstrap items
@@ -106,9 +73,9 @@ final class Package implements PackageInterface
     }
 
     /**
-     * @return array|null
+     * @return array
      */
-    public function getDependencies(): ?array
+    public function getDependencies(): array
     {
         /**
          * require all the framework's default packages

@@ -11,7 +11,7 @@ namespace Ixocreate\Framework;
 
 use Ixocreate\Application\Http\ErrorHandling\Factory\ErrorResponseGeneratorFactory;
 use Ixocreate\Application\Http\ErrorHandling\Response\ErrorResponseGenerator;
-use Ixocreate\Application\Service\ServiceManagerConfigurator;
+use Ixocreate\Application\ServiceManager\ServiceManagerConfigurator;
 
 /** @var ServiceManagerConfigurator $serviceManager */
 $serviceManager->addFactory(ErrorResponseGenerator::class, ErrorResponseGeneratorFactory::class);

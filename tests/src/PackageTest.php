@@ -14,11 +14,9 @@ use Ixocreate\Application\Console\ConsoleBootstrapItem;
 use Ixocreate\Application\Http\Middleware\MiddlewareBootstrapItem;
 use Ixocreate\Application\Http\Pipe\PipeBootstrapItem;
 use Ixocreate\Application\Publish\PublishBootstrapItem;
-use Ixocreate\Application\Service\ServiceManagerBootstrapItem;
-use Ixocreate\Application\Service\ServiceRegistryInterface;
+use Ixocreate\Application\ServiceManager\ServiceManagerBootstrapItem;
 use Ixocreate\Application\Uri\ApplicationUriBootstrapItem;
 use Ixocreate\Framework\Package;
-use Ixocreate\ServiceManager\ServiceManagerInterface;
 use PHPUnit\Framework\TestCase;
 
 class PackageTest extends TestCase
@@ -43,13 +41,9 @@ class PackageTest extends TestCase
     public function testPackage()
     {
         $configuratorRegistry = $this->mockConfiguratorRegistry();
-        $serviceRegistry = $this->getMockBuilder(ServiceRegistryInterface::class)->getMock();
-        $serviceManager = $this->getMockBuilder(ServiceManagerInterface::class)->getMock();
 
         $package = new Package();
         $package->configure($configuratorRegistry);
-        $package->addServices($serviceRegistry);
-        $package->boot($serviceManager);
 
         $this->assertSame([
             ApplicationUriBootstrapItem::class,
@@ -58,8 +52,7 @@ class PackageTest extends TestCase
             PipeBootstrapItem::class,
             PublishBootstrapItem::class,
         ], $package->getBootstrapItems());
-        $this->assertNull($package->getConfigDirectory());
-        $this->assertNull($package->getConfigProvider());
+
         $this->assertSame([
             \Ixocreate\Asset\Package::class,
             \Ixocreate\Cache\Package::class,
@@ -82,6 +75,7 @@ class PackageTest extends TestCase
             \Ixocreate\Translation\Package::class,
             \Ixocreate\Validation\Package::class,
         ], $package->getDependencies());
+
         $this->assertDirectoryExists($package->getBootstrapDirectory());
     }
 }
