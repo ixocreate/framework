@@ -10,12 +10,7 @@ declare(strict_types=1);
 namespace Ixocreate\Test\Test;
 
 use Ixocreate\Application\Configurator\ConfiguratorRegistryInterface;
-use Ixocreate\Application\Console\ConsoleBootstrapItem;
-use Ixocreate\Application\Http\Middleware\MiddlewareBootstrapItem;
-use Ixocreate\Application\Http\Pipe\PipeBootstrapItem;
-use Ixocreate\Application\Publish\PublishBootstrapItem;
 use Ixocreate\Application\ServiceManager\ServiceManagerBootstrapItem;
-use Ixocreate\Application\Uri\ApplicationUriBootstrapItem;
 use Ixocreate\Framework\Package;
 use PHPUnit\Framework\TestCase;
 
@@ -40,18 +35,9 @@ class PackageTest extends TestCase
      */
     public function testPackage()
     {
-        $configuratorRegistry = $this->mockConfiguratorRegistry();
-
         $package = new Package();
-        $package->configure($configuratorRegistry);
 
-        $this->assertSame([
-            ApplicationUriBootstrapItem::class,
-            ConsoleBootstrapItem::class,
-            MiddlewareBootstrapItem::class,
-            PipeBootstrapItem::class,
-            PublishBootstrapItem::class,
-        ], $package->getBootstrapItems());
+        $this->assertEmpty($package->getBootstrapItems());
 
         $this->assertSame([
             \Ixocreate\Asset\Package::class,
