@@ -9,43 +9,10 @@ declare(strict_types=1);
 
 namespace Ixocreate\Framework;
 
-use Ixocreate\Application\Configurator\ConfiguratorRegistryInterface;
-use Ixocreate\Application\Console\ConsoleBootstrapItem;
-use Ixocreate\Application\Console\ConsoleRunner;
-use Ixocreate\Application\Console\ConsoleSubManager;
-use Ixocreate\Application\Console\Factory\ConsoleRunnerFactory;
-use Ixocreate\Application\Http\Factory\FastRouterFactory;
-use Ixocreate\Application\Http\Factory\RequestHandlerRunnerFactory;
-use Ixocreate\Application\Http\Middleware\MiddlewareBootstrapItem;
-use Ixocreate\Application\Http\Middleware\MiddlewareSubManager;
-use Ixocreate\Application\Http\Pipe\PipeBootstrapItem;
-use Ixocreate\Application\Package\ConfigureAwareInterface;
 use Ixocreate\Application\Package\PackageInterface;
-use Ixocreate\Application\Publish\PublishBootstrapItem;
-use Ixocreate\Application\ServiceManager\ServiceManagerBootstrapItem;
-use Ixocreate\Application\ServiceManager\ServiceManagerConfigurator;
-use Ixocreate\Application\Uri\ApplicationUriBootstrapItem;
-use Laminas\HttpHandlerRunner\RequestHandlerRunner;
-use Mezzio\Router\FastRouteRouter;
 
-final class Package implements PackageInterface, ConfigureAwareInterface
+final class Package implements PackageInterface
 {
-    /**
-     * @param ConfiguratorRegistryInterface $configuratorRegistry
-     */
-    public function configure(ConfiguratorRegistryInterface $configuratorRegistry): void
-    {
-        /** @var ServiceManagerConfigurator $serviceManagerConfigurator */
-        $serviceManagerConfigurator = $configuratorRegistry->get(ServiceManagerBootstrapItem::class);
-
-        $serviceManagerConfigurator->addFactory(RequestHandlerRunner::class, RequestHandlerRunnerFactory::class);
-        $serviceManagerConfigurator->addFactory(FastRouteRouter::class, FastRouterFactory::class);
-        $serviceManagerConfigurator->addSubManager(MiddlewareSubManager::class);
-
-        $serviceManagerConfigurator->addFactory(ConsoleRunner::class, ConsoleRunnerFactory::class);
-        $serviceManagerConfigurator->addSubManager(ConsoleSubManager::class);
-    }
-
     /**
      * @return null|string
      */
@@ -59,17 +26,7 @@ final class Package implements PackageInterface, ConfigureAwareInterface
      */
     public function getBootstrapItems(): array
     {
-        /**
-         * register the application's bootstrap items
-         * TODO: the application should probably do that by itself
-         */
-        return [
-            ApplicationUriBootstrapItem::class,
-            ConsoleBootstrapItem::class,
-            MiddlewareBootstrapItem::class,
-            PipeBootstrapItem::class,
-            PublishBootstrapItem::class,
-        ];
+        return [];
     }
 
     /**
