@@ -41,14 +41,14 @@ class SetupConsole extends Command implements CommandInterface
         $password = $io->ask('Password', '');
         $host = $io->ask('Host', '127.0.0.1');
 
-        $this->generateConfig('database', $output);
+        $this->generateBootstrap('database', $output);
 
-        $fileContent = \file_get_contents('config/local/database.config.php');
+        $fileContent = \file_get_contents('bootstrap/local/database.php');
         $fileContent = \preg_replace("/'dbname' => '[a-z0-9_-]*'/i", "'dbname' => '{$database}'", $fileContent);
         $fileContent = \preg_replace("/'user' => '[a-z0-9_-]*'/i", "'user' => '{$user}'", $fileContent);
         $fileContent = \preg_replace("/'password' => '[a-z0-9_-]*'/i", "'password' => '{$password}'", $fileContent);
         $fileContent = \preg_replace("/'host' => '[a-z0-9_-]*'/i", "'host' => '{$host}'", $fileContent);
-        \file_put_contents('config/local/database.config.php', $fileContent);
+        \file_put_contents('bootstrap/local/database.php', $fileContent);
 
         // project uri
         $io->section('Project ApplicationUri');
@@ -60,11 +60,11 @@ class SetupConsole extends Command implements CommandInterface
         \rename('bootstrap/application-uri.php', 'bootstrap/local/application-uri.php');
 
         // asset
-        $this->generateConfig('asset', $output);
+        $this->generateBootstrap('asset', $output);
 
-        $fileContent = \file_get_contents('config/local/asset.config.php');
+        $fileContent = \file_get_contents('bootstrap/local/asset.php');
         $fileContent = \str_replace("'url' => []", "'url' => ['/assets']", $fileContent);
-        \file_put_contents('config/local/asset.config.php', $fileContent);
+        \file_put_contents('bootstrap/local/asset.php', $fileContent);
 
         \symlink('../resources/assets', 'public/assets');
 
@@ -97,19 +97,8 @@ EOD;
             './ixocreate migration:migrate',
             './ixocreate admin:create-user',
         ]);
-    }
 
-    private function generateConfig($file, $output)
-    {
-        $command = $this->getApplication()->find('config:generate');
-
-        $arguments = [
-            'command' => 'config:generate',
-            'file' => $file,
-        ];
-
-        $commandInput = new ArrayInput($arguments);
-        $returnCode = $command->run($commandInput, $output);
+        return 0;
     }
 
     private function generateBootstrap($file, $output)

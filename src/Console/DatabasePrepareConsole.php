@@ -80,7 +80,7 @@ class DatabasePrepareConsole extends Command implements CommandInterface
             $this->typeConfig
         );
 
-        foreach ($this->connectionSubManager->getServices() as $service) {
+        foreach ($this->connectionSubManager->services() as $service) {
             $connection = $this->connectionSubManager->get($service);
 
             $configuration = new Configuration();
@@ -109,5 +109,7 @@ class DatabasePrepareConsole extends Command implements CommandInterface
             foreach ($metadatas as $metadata) {
             }
         }
+
+        return 0;
     }
 }

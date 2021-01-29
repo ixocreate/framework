@@ -41,5 +41,7 @@ class ServiceManagerPrepareConsole extends Command implements CommandInterface
         (new LazyLoadingFileGenerator())->generate($this->serviceManager);
 
         (new AutowireFactoryGenerator())->generate($this->serviceManager);
+
+        return 0;
     }
 }

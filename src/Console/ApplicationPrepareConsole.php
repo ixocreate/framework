@@ -37,5 +37,7 @@ class ApplicationPrepareConsole extends Command implements CommandInterface
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         (new ServiceHandler())->save($this->applicationConfig);
+
+        return 0;
     }
 }
