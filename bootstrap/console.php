@@ -11,8 +11,6 @@ namespace Ixocreate\Framework;
 
 use Ixocreate\Application\Bootstrap\Console\BootstrapGenerateCommand;
 use Ixocreate\Application\Bootstrap\Console\BootstrapListCommand;
-use Ixocreate\Application\Console\ConfigGenerateCommand;
-use Ixocreate\Application\Console\ConfigListCommand;
 use Ixocreate\Application\Console\ConsoleConfigurator;
 use Ixocreate\Application\Publish\Console\PublishCommand;
 use Ixocreate\Application\Publish\Console\PublishListCommand;
@@ -27,8 +25,6 @@ $console->addCommand(BootstrapListCommand::class);
 $console->addCommand(BootstrapGenerateCommand::class);
 $console->addCommand(PublishCommand::class);
 $console->addCommand(PublishListCommand::class);
-$console->addCommand(ConfigListCommand::class);
-$console->addCommand(ConfigGenerateCommand::class);
 $console->addCommand(SetupConsole::class);
 $console->addCommand(ApplicationPrepareConsole::class);
 $console->addCommand(DatabasePrepareConsole::class);
