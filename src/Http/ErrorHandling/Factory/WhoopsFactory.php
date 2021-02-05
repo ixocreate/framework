@@ -9,7 +9,6 @@ declare(strict_types=1);
 
 namespace Ixocreate\Framework\Http\ErrorHandling\Factory;
 
-use Ixocreate\Application\Config\Config;
 use Ixocreate\ServiceManager\FactoryInterface;
 use Ixocreate\ServiceManager\ServiceManagerInterface;
 use Whoops\Handler\JsonResponseHandler;
