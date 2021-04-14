@@ -10,11 +10,11 @@ declare(strict_types=1);
 namespace Ixocreate\Framework\Http\ErrorHandling\Response;
 
 use Ixocreate\Template\Renderer;
+use Laminas\Diactoros\Response\JsonResponse;
+use Laminas\Stratigility\Utils;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Throwable;
-use Zend\Diactoros\Response\JsonResponse;
-use Zend\Stratigility\Utils;
 
 final class ErrorResponseGenerator
 {

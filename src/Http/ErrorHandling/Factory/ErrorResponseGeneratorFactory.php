@@ -10,11 +10,11 @@ declare(strict_types=1);
 namespace Ixocreate\Framework\Http\ErrorHandling\Factory;
 
 use Ixocreate\Application\ApplicationConfig;
-use Ixocreate\Application\Http\ErrorHandling\Response\ErrorResponseGenerator;
+use Ixocreate\Framework\Http\ErrorHandling\Response\ErrorResponseGenerator;
 use Ixocreate\ServiceManager\FactoryInterface;
 use Ixocreate\ServiceManager\ServiceManagerInterface;
 use Ixocreate\Template\Renderer;
-use Zend\Expressive\Middleware\WhoopsErrorResponseGenerator;
+use Mezzio\Middleware\WhoopsErrorResponseGenerator;
 
 final class ErrorResponseGeneratorFactory implements FactoryInterface
 {
