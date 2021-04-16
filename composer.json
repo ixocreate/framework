@@ -16,17 +16,17 @@
     "require": {
         "php": "^7.2 || ^8.0",
         "filp/whoops": "^2.1",
-        "ixocreate/admin-package": "dev-develop",
-        "ixocreate/application": "dev-develop",
+        "ixocreate/admin-package": "^0.4.0",
+        "ixocreate/application": "^0.3.0",
         "ixocreate/cms-package": "0.4.x-dev",
-        "ixocreate/mail-package": "dev-develop",
-        "ixocreate/media-package": "dev-develop",
-        "ixocreate/registry-package": "dev-develop",
-        "ixocreate/translation-package": "dev-develop"
+        "ixocreate/mail-package": "^0.2.0",
+        "ixocreate/media-package": "^0.5.0",
+        "ixocreate/registry-package": "^0.4.0",
+        "ixocreate/translation-package": "^0.4.0"
     },
     "require-dev": {
         "ixocreate/coding-standard": "^2.0",
-        "ixocreate/test": "^0.1"
+        "ixocreate/test": "^0.2"
     },
     "autoload": {
         "psr-4": {
