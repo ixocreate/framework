@@ -9,11 +9,11 @@ declare(strict_types=1);
 
 namespace Ixocreate\Framework\Console\Factory;
 
-use Ixocreate\Framework\Console\ServiceManagerPrepareConsole;
+use Ixocreate\Framework\Console\PrepareServiceManagerConsole;
 use Ixocreate\ServiceManager\FactoryInterface;
 use Ixocreate\ServiceManager\ServiceManagerInterface;
 
-final class ServiceManagerPrepareConsoleFactory implements FactoryInterface
+final class PrepareServiceManagerConsoleFactory implements FactoryInterface
 {
     /**
      * @param ServiceManagerInterface $container
@@ -23,6 +23,6 @@ final class ServiceManagerPrepareConsoleFactory implements FactoryInterface
      */
     public function __invoke(ServiceManagerInterface $container, $requestedName, array $options = null)
     {
-        return new ServiceManagerPrepareConsole($container);
+        return new PrepareServiceManagerConsole($container);
     }
 }

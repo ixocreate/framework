@@ -14,10 +14,11 @@ use Ixocreate\Application\Bootstrap\Console\BootstrapListCommand;
 use Ixocreate\Application\Console\ConsoleConfigurator;
 use Ixocreate\Application\Publish\Console\PublishCommand;
 use Ixocreate\Application\Publish\Console\PublishListCommand;
-use Ixocreate\Framework\Console\ApplicationPrepareConsole;
-use Ixocreate\Framework\Console\DatabasePrepareConsole;
-use Ixocreate\Framework\Console\Factory\ServiceManagerPrepareConsoleFactory;
-use Ixocreate\Framework\Console\ServiceManagerPrepareConsole;
+use Ixocreate\Framework\Console\PrepareAllConsole;
+use Ixocreate\Framework\Console\PrepareApplicationConsole;
+use Ixocreate\Framework\Console\PrepareDatabaseConsole;
+use Ixocreate\Framework\Console\Factory\PrepareServiceManagerConsoleFactory;
+use Ixocreate\Framework\Console\PrepareServiceManagerConsole;
 use Ixocreate\Framework\Console\SetupConsole;
 
 /** @var ConsoleConfigurator $console */
@@ -26,9 +27,10 @@ $console->addCommand(BootstrapGenerateCommand::class);
 $console->addCommand(PublishCommand::class);
 $console->addCommand(PublishListCommand::class);
 $console->addCommand(SetupConsole::class);
-$console->addCommand(ApplicationPrepareConsole::class);
-$console->addCommand(DatabasePrepareConsole::class);
-$console->addCommand(ServiceManagerPrepareConsole::class, ServiceManagerPrepareConsoleFactory::class);
+$console->addCommand(PrepareAllConsole::class);
+$console->addCommand(PrepareApplicationConsole::class);
+$console->addCommand(PrepareDatabaseConsole::class);
+$console->addCommand(PrepareServiceManagerConsole::class, PrepareServiceManagerConsoleFactory::class);
 
 $console->addDirectory(\getcwd() . '/src/App/Console', true);
 $console->addDirectory(\getcwd() . '/src/Admin/Console', true);
