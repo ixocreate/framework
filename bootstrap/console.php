@@ -14,10 +14,10 @@ use Ixocreate\Application\Bootstrap\Console\BootstrapListCommand;
 use Ixocreate\Application\Console\ConsoleConfigurator;
 use Ixocreate\Application\Publish\Console\PublishCommand;
 use Ixocreate\Application\Publish\Console\PublishListCommand;
+use Ixocreate\Framework\Console\Factory\PrepareServiceManagerConsoleFactory;
 use Ixocreate\Framework\Console\PrepareAllConsole;
 use Ixocreate\Framework\Console\PrepareApplicationConsole;
 use Ixocreate\Framework\Console\PrepareDatabaseConsole;
-use Ixocreate\Framework\Console\Factory\PrepareServiceManagerConsoleFactory;
 use Ixocreate\Framework\Console\PrepareServiceManagerConsole;
 use Ixocreate\Framework\Console\SetupConsole;
 
