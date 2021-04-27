@@ -9,15 +9,15 @@ declare(strict_types=1);
 
 namespace Ixocreate\Framework;
 
-use Ixocreate\Application\Http\ErrorHandling\Factory\ErrorHandlerFactory;
-use Ixocreate\Application\Http\ErrorHandling\Factory\NotFoundHandlerFactory;
-use Ixocreate\Application\Http\ErrorHandling\Response\NotFoundHandler;
 use Ixocreate\Application\Http\Middleware\Factory\SegmentMiddlewareFactory;
 use Ixocreate\Application\Http\Middleware\MiddlewareConfigurator;
 use Ixocreate\Application\Http\Middleware\RootRequestWrapperMiddleware;
 use Ixocreate\Application\Http\Middleware\SegmentMiddlewarePipe;
 use Ixocreate\Application\Uri\Middleware\ApplicationUriCheckMiddleware;
-use Zend\Stratigility\Middleware\ErrorHandler;
+use Ixocreate\Framework\Http\ErrorHandling\Factory\ErrorHandlerFactory;
+use Ixocreate\Framework\Http\ErrorHandling\Factory\NotFoundHandlerFactory;
+use Ixocreate\Framework\Http\ErrorHandling\Response\NotFoundHandler;
+use Laminas\Stratigility\Middleware\ErrorHandler;
 
 /** @var MiddlewareConfigurator $middleware */
 $middleware->addMiddleware(ApplicationUriCheckMiddleware::class);

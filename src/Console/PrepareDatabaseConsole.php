@@ -26,7 +26,7 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class DatabasePrepareConsole extends Command implements CommandInterface
+class PrepareDatabaseConsole extends Command implements CommandInterface
 {
     /**
      * @var ApplicationConfig
@@ -80,7 +80,7 @@ class DatabasePrepareConsole extends Command implements CommandInterface
             $this->typeConfig
         );
 
-        foreach ($this->connectionSubManager->getServices() as $service) {
+        foreach ($this->connectionSubManager->services() as $service) {
             $connection = $this->connectionSubManager->get($service);
 
             $configuration = new Configuration();
@@ -104,10 +104,12 @@ class DatabasePrepareConsole extends Command implements CommandInterface
                 $configuration
             );
 
-            $metadatas = $entityManager->getMetadataFactory()->getAllMetadata();
+            $metadataList = $entityManager->getMetadataFactory()->getAllMetadata();
 
-            foreach ($metadatas as $metadata) {
+            foreach ($metadataList as $metadataList) {
             }
         }
+
+        return 0;
     }
 }

@@ -18,7 +18,7 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class ServiceManagerPrepareConsole extends Command implements CommandInterface
+class PrepareServiceManagerConsole extends Command implements CommandInterface
 {
     /**
      * @var ServiceManager
@@ -41,5 +41,7 @@ class ServiceManagerPrepareConsole extends Command implements CommandInterface
         (new LazyLoadingFileGenerator())->generate($this->serviceManager);
 
         (new AutowireFactoryGenerator())->generate($this->serviceManager);
+
+        return 0;
     }
 }
