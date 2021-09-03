@@ -13,7 +13,7 @@ use Ixocreate\Framework\Http\ErrorHandling\Response\NotFoundHandler;
 use Ixocreate\ServiceManager\FactoryInterface;
 use Ixocreate\ServiceManager\ServiceManagerInterface;
 use Ixocreate\Template\Renderer;
-use Zend\Diactoros\Response;
+use Laminas\Diactoros\Response;
 
 final class NotFoundHandlerFactory implements FactoryInterface
 {
