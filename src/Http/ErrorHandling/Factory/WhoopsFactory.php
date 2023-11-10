@@ -11,11 +11,11 @@ namespace Ixocreate\Framework\Http\ErrorHandling\Factory;
 
 use Ixocreate\ServiceManager\FactoryInterface;
 use Ixocreate\ServiceManager\ServiceManagerInterface;
+use Mezzio\Container\Exception\InvalidServiceException;
 use Whoops\Handler\JsonResponseHandler;
 use Whoops\Handler\PrettyPageHandler;
 use Whoops\Run as Whoops;
 use Whoops\Util\Misc as WhoopsUtil;
-use Zend\Expressive\Container\Exception;
 
 final class WhoopsFactory implements FactoryInterface
 {
@@ -99,7 +99,7 @@ final class WhoopsFactory implements FactoryInterface
         }
 
         if (! \is_string($editor)) {
-            throw new Exception\InvalidServiceException(\sprintf(
+            throw new InvalidServiceException(\sprintf(
                 'Whoops editor must be a string editor name, string service name, or callable; received "%s"',
                 \is_object($editor) ? \get_class($editor) : \gettype($editor)
             ));

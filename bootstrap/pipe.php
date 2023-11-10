@@ -17,8 +17,8 @@ use Ixocreate\Template\Middleware\TemplateMiddleware;
 use Laminas\Stratigility\Middleware\ErrorHandler;
 
 /** @var PipeConfigurator $pipe */
-$pipe->pipe(ErrorHandler::class, PHP_INT_MAX);
-$pipe->pipe(RootRequestWrapperMiddleware::class, PHP_INT_MAX);
-$pipe->pipe(ApplicationUriCheckMiddleware::class, PHP_INT_MAX);
-$pipe->pipe(TemplateMiddleware::class, PHP_INT_MAX);
-$pipe->pipe(NotFoundHandler::class, PHP_INT_MAX * -1);
+$pipe->pipe(ErrorHandler::class, PHP_INT_MAX - 100);
+$pipe->pipe(RootRequestWrapperMiddleware::class, PHP_INT_MAX - 200);
+$pipe->pipe(ApplicationUriCheckMiddleware::class, PHP_INT_MAX - 300);
+$pipe->pipe(TemplateMiddleware::class, PHP_INT_MAX - 400);
+$pipe->pipe(NotFoundHandler::class, (PHP_INT_MAX * -1) + 100);
