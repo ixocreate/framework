@@ -59,7 +59,9 @@ final class ErrorResponseGenerator
         $response = $response->withStatus(Utils::getStatusCode($e, $response));
 
         if ($request->hasHeader('content-type') && \in_array('application/json', $request->getHeader('content-type'))) {
-            return $this->prepareJsonErrorPlainResponse($e);
+            return new JsonResponse([
+                'success' => false
+            ]);
         }
         if ($this->renderer) {
             return $this->prepareTemplateResponse(
@@ -108,20 +110,5 @@ final class ErrorResponseGenerator
         $message = "Oops, an 500 Internal Server Error occurred. ";
         $response->getBody()->write($message);
         return $response;
-    }
-
-    /**
-     * @param Throwable $e
-     * @return JsonResponse
-     */
-    private function prepareJsonErrorPlainResponse(Throwable $e) : JsonResponse
-    {
-        return new JsonResponse([
-            'class' => \get_class($e),
-            'file' => $e->getFile(),
-            'line' => $e->getLine(),
-            'message' => $e->getMessage(),
-            'stackTrace' => $e->getTrace(),
-        ]);
     }
 }
