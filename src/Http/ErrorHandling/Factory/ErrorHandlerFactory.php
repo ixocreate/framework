@@ -12,10 +12,12 @@ namespace Ixocreate\Framework\Http\ErrorHandling\Factory;
 use Ixocreate\Framework\Http\ErrorHandling\Response\ErrorResponseGenerator;
 use Ixocreate\ServiceManager\FactoryInterface;
 use Ixocreate\ServiceManager\ServiceManagerInterface;
+use Ixocreate\Application\ApplicationConfig;
 use Laminas\Diactoros\Response;
 use Laminas\Stratigility\Middleware\ErrorHandler;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
+
 
 final class ErrorHandlerFactory implements FactoryInterface
 {
