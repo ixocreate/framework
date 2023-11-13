@@ -35,6 +35,11 @@ final class ErrorHandlerFactory implements FactoryInterface
             ) use ($container) {
                 // wrap for lazy loading
                 $generator = $container->get(ErrorResponseGenerator::class);
+
+                if($container->get(ApplicationConfig::class)->isLogErrors()) {
+                    \error_log(\sprintf("%s: %s in %s:%d\nStack trace:\n%s", \get_class($e), $e->getMessage(), $e->getFile(), $e->getLine(), $e->getTraceAsString()));
+                }
+
                 return $generator($e, $request, $response);
             }
         : null;

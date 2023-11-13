@@ -15,7 +15,7 @@
         "php": "^7.2 || ^8.0",
         "filp/whoops": "^2.10",
         "ixocreate/admin-package": "^0.4.0",
-        "ixocreate/application": "^0.3.0",
+        "ixocreate/application": "^0.3.3",
         "ixocreate/cms-package": "^0.4.0",
         "ixocreate/mail-package": "^0.2.0",
         "ixocreate/media-package": "^0.5.0",
@@ -38,7 +38,10 @@
         }
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "ocramius/package-versions": false
+        }
     },
     "scripts": {
         "fix-cs": "vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix --config vendor/ixocreate/coding-standard/.php_cs"
